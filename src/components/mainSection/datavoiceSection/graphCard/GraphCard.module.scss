@@ -1,0 +1,40 @@
+@import "../../../../../styles/common";
+
+.graphCont {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    .graphList {
+        display: flex;
+        flex-direction: column;
+        padding: 24px 32px;
+        width: 48%;
+        .graphData {
+            background-color: $blue;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            padding: 24px 32px;
+            margin-top: 16px;
+            min-height: 420px;
+            .graphImg {
+                background-color: $blue;
+            }
+            .graphLine {
+                width: 288px;
+                height: 1px;
+                background-color: $white;
+            }
+            .graphText {
+                color: $white;
+                font-size: 14px;
+                font-weight: 300;
+                text-align: justify;
+                background-color: $blue;
+            }
+        }
+    }
+}
+
