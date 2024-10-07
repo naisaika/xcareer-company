@@ -9,3 +9,18 @@
 	background-color: #fff;
 	font-family: 'Noto Sans JP', sans-serif;
 }
+
+html {
+	scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    background: #FDFAEA; 
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #E0A009;
+    border-radius: 5px;
+}

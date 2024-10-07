@@ -1,0 +1,37 @@
+@import "../../../../styles/common";
+
+.modalSection {
+    display: none;
+}
+
+.modalBg {
+    background-color: rgba(0, 0, 0, .6);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    z-index: 5;
+}
+
+.modalSectionShow {
+    display: block;
+    max-width: 568px;
+    width: 50%;
+    margin: 0 auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    .modalTitle {
+        background-color: $blue;
+        color: $white;
+        text-align: center;
+        padding: 4px 0;
+    }
+    .closeBtnCont {
+        text-align: center;
+        padding-bottom: 40px;
+    }
+}

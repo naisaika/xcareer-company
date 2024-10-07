@@ -1,0 +1,33 @@
+@import "../../../../../styles/common";
+
+.telSection {
+    background-color: $cream;
+    border-radius: 5px;
+    border: solid 1px $blue;
+    padding: 40px 56px;
+    margin-top: 24px;
+    .telCont {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $cream;
+        color: $orange;
+        font-size: 32px;
+        font-weight: 600;
+        .telImg {
+            background-color: $cream;
+            margin: 4px 4px 0 0;
+        }
+        .telText {
+            background-color: $cream;
+        }
+    }
+    .telTime {
+        background-color: $cream;
+        color: $black;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 600;
+        margin-top: 8px;
+    }
+}

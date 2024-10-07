@@ -1,6 +1,7 @@
 import {FLOW_IMG, FLOW_TITLE, FLOW_TEXT } from "@/data/data";
 import styles from "./FlowCard.module.scss"
 import Image from "next/image";
+import { FlowCardBtn } from "./flowCardBtn/FlowCardBtn";
 
 export const FlowCard = () => {
   return (
@@ -20,7 +21,7 @@ export const FlowCard = () => {
                                 {flowText.text}
                                 {flowText.id === 0 && (
                                     <span className={styles.flowListText}>
-                                        <span className={styles.flowListLink}>{flowText.text2}</span>
+                                        <FlowCardBtn>{flowText.text2}</FlowCardBtn>
                                         {flowText.text3}
                                     </span>
                                 )}

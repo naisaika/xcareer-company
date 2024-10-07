@@ -3,13 +3,15 @@ import styles from "./CostSection.module.scss"
 import Image from "next/image";
 import { CostCard } from "./costCard/CostCard";
 import { InquiryButton } from "@/components/Button/inquiryButton/InquiryButton";
+import { Element } from "react-scroll";
+
 
 const sectionId = 1;
 const sectionTitle = TEXT_LIST.find((title) => title.id === sectionId)
 
 export const CostSection = () => {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="costSection">
         <h2 className={styles.sectionTitle}>{sectionTitle && sectionTitle.title}</h2>
         <div className={styles.wrapper}>
             <div className={styles.prPointCont}>

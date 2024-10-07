@@ -2,15 +2,16 @@
 export interface TextListType {
     id: number;
     title: string;
+    anchorlink: string;
 }
 
 export const TEXT_LIST: TextListType[] = [
-    { id: 0, title: "Factor Xキャリアの特徴"},
-    { id: 1, title: "ご利用料金について"},
-    { id: 2, title: "ご利用の流れ"},
-    { id: 3, title: "登録人材・利用者の声"},
-    { id: 4, title: "お問い合わせ"},
-    { id: 5, title: "Factor X"}
+    { id: 0, title: "Factor Xキャリアの特徴", anchorlink: "pointSection"},
+    { id: 1, title: "ご利用料金について", anchorlink: "costSection"},
+    { id: 2, title: "ご利用の流れ", anchorlink: "flowSection"},
+    { id: 3, title: "登録人材・利用者の声", anchorlink: "dataVoiceSection"},
+    { id: 4, title: "お問い合わせ", anchorlink: "contactSection"},
+    { id: 5, title: "Factor X", anchorlink: "https://www.factorx.jp/"}
 ]
 
 // Factor Xの特徴の画像
@@ -240,6 +241,7 @@ export const ANSWER: AnswerType[] = [
 export interface FormType {
     id: string;
     label: string;
+    label2?: string;
     placeholder: string;
     autoComplete?: string;
     register: "companyname" | "sendername" | "position" | "email" | "tel" | "content";
@@ -289,8 +291,34 @@ export const FORM: FormType[] = [
       {
         id: "content",
         label: "お問い合わせ内容",
+        label2: "(1000文字以内)",
         placeholder: "お問い合わせ内容を入力",
         register: "content",
         isTextarea: true,
       },
 ];
+
+// footer見出し
+export interface footerTitleType {
+    id: number;
+    title: string;
+}
+
+export const FOOTER_TITLE: footerTitleType[] = [
+    { id: 0, title: "Factor Xキャリア"},
+    { id: 1, title: "Factor X"}
+]
+
+// footerリンク
+export interface footerLinkType {
+    id: number;
+    text: string;
+    text2?: string;
+}
+
+export const FOOTER_LINK: footerLinkType[] = [
+    { id: 0, text: "運営会社について"},
+    { id: 1, text: "プライバシーポリシー"},
+    { id: 2, text: "Factor X", text2: "－工場・製造業の人材・技術マッチング－"}
+]
+
