@@ -1,0 +1,34 @@
+@import "../../../../../styles/common";
+
+.pripoliCont {
+    color: $black;
+    font-size: 14px;
+    .pripoliContents {
+        margin-bottom: 24px;
+        .textIndent {
+            text-indent: -2.5em;
+            padding-left: 1.5em;
+        }
+        .textIndent2 {
+            text-indent: -3em;
+            padding-left: 1.5em;
+        }
+    }
+}
+
+.pripoliCont h3 {
+    margin-bottom: 32px;
+}
+
+.pripoliCont h4 {
+    margin: 16px 0;
+}
+
+.pripoliCont ol {
+    list-style: none;
+}
+
+.pripoliCont ul {
+    list-style: none;
+}
+

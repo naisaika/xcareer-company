@@ -299,26 +299,41 @@ export const FORM: FormType[] = [
 ];
 
 // footer見出し
-export interface footerTitleType {
+export interface FooterTitleType {
     id: number;
     title: string;
 }
 
-export const FOOTER_TITLE: footerTitleType[] = [
+export const FOOTER_TITLE: FooterTitleType[] = [
     { id: 0, title: "Factor Xキャリア"},
     { id: 1, title: "Factor X"}
 ]
 
 // footerリンク
-export interface footerLinkType {
+export interface FooterLinkType {
     id: number;
     text: string;
     text2?: string;
 }
 
-export const FOOTER_LINK: footerLinkType[] = [
+export const FOOTER_LINK: FooterLinkType[] = [
     { id: 0, text: "運営会社について"},
     { id: 1, text: "プライバシーポリシー"},
     { id: 2, text: "Factor X", text2: "－工場・製造業の人材・技術マッチング－"}
 ]
 
+// submit送信完了・失敗
+export interface SubmitType {
+    id: number;
+    status: string;
+    title: string;
+    img: string;
+    altImg: string;
+    text: string;
+    text2: string;
+}
+
+export const SUBMIT: SubmitType[] = [
+    { id: 0, status: "success", title: "送信完了", img: "/submit/okmark.png", altImg: "送信完了画像", text: "お問い合わせ受付を完了いたしました。", text2: "担当者よりご連絡を差し上げますので、しばらくお待ちくださいますようよろしくお願いいたします。"},
+    { id: 1, status: "failed", title: "送信失敗", img: "/submit/ngmark.png", altImg: "送信失敗画像", text: "メッセージの送信に失敗しました。", text2: "大変お手数ですが、時間をおいてから再度お試しください。"}
+]

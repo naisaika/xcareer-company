@@ -1,0 +1,11 @@
+@import "../../../../../../../styles/common";
+
+.pointText {
+    background-color: $orange;
+    color: $white;
+    display: block;
+    text-align: center;
+    padding: 0 32px;
+    font-weight: 500;
+    font-size: 18px;
+}

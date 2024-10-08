@@ -1,0 +1,49 @@
+@import "../../../../../styles/common";
+
+.companyInfoCont {
+    color: $black;
+    font-size: 14px;
+    max-width: 568px;
+    margin: 80px auto 40px;
+    max-height: 520px;
+    overflow-y: scroll;
+    border-radius: 5px;
+    text-align: left;
+    &::-webkit-scrollbar {
+        background: $cream;
+        width: 6px;
+        height: 6px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: $yellow;
+        border-radius: 5px;
+    }
+}
+
+.companyInfoCont dl {
+    display: flex;
+    padding: 16px 0;
+    flex-wrap: wrap;
+    margin: 0 10% 24px;
+}
+
+.companyInfoCont dt {
+    width: 30%;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 0;
+    border-bottom: 1px solid $blue;
+}
+
+.companyInfoCont dd {
+    width: 70%;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 0;
+    border-bottom: 1px solid $blue;
+}
+
+.companyInfoCont iframe {
+    border: none;
+    padding: 16px;
+}

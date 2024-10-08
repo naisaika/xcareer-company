@@ -1,8 +1,11 @@
+"use client";
+
 import { TEXT_LIST } from "@/data/data"
 import styles from "./ContactSection.module.scss"
 import { ContactTitleParts } from "./contactTitleParts/ContactTitleParts";
 import { FormSection } from "./formSection/FormSection";
 import { TelSection } from "./telSection/TelSection";
+import { FormContext } from "./formSection/formContext/FormContext";
 
 const sectionId = 4; 
 const titleText = TEXT_LIST.find((textId) => textId.id === sectionId);
@@ -14,7 +17,9 @@ export const ContactSection = () => {
         <div className={styles.wrapper}>
             <p className={styles.sectionText}>Factor Xキャリアへのお問い合わせは以下の入力フォームへ必要事項をご入力の上送信ください。</p>
             <ContactTitleParts>フォームでのお問い合わせ</ContactTitleParts>
+            <FormContext>
             <FormSection/>
+            </FormContext>
             <ContactTitleParts>お電話でのお問い合わせ</ContactTitleParts>
             <TelSection/>
         </div>

@@ -5,20 +5,35 @@ import styles from "./FormSection.module.scss"
 import { ContactForm } from "./formHooks/FormHooks"
 import { useState } from "react";
 import { PrivacyPolicyModal } from "@/components/modal/privacyPolicy/PrivacyPolicyModal";
+import { SubmitModal } from "@/components/modal/submit/SubmitModal";
+import { useModal } from "./formContext/FormContext";
 
 export const FormSection = () => {
+  const {isSubmitModalOpen, submitSuccess, submitFailed, closeSubmitModal} = useModal();
+  const [isPripoliModalOpen, setIsPripoliModalOpen] = useState(false);
+  // const [isSubmitModalOpen, setIsSubtmiModalOpen] = useState(false);
+  // const [submitSuccess, setSubmitSuccess] = useState(false);
+  // const [submitFailed, setSubmitFailed] = useState(false);
   const { register, handleSubmit, formState: { errors } } = ContactForm();
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const openModal = () => {
-    setIsModalOpen(!isModalOpen);
+
+  const openPripoliModal = () => {
+    setIsPripoliModalOpen(!isPripoliModalOpen);
     document.body.classList.add(styles.bodyFixed);
   }
 
-  const closeModal = () => {
-    setIsModalOpen(!isModalOpen);
+  const closePripoliModal = () => {
+    setIsPripoliModalOpen(!isPripoliModalOpen);
     document.body.classList.remove(styles.bodyFixed);
   }
+  closeSubmitModal();
+
+  // const closeSubmitModal = () => {
+  //   setIsSubtmiModalOpen(false);
+  //   setSubmitSuccess(false);
+  //   setSubmitFailed(false);
+  //   document.body.classList.remove(styles.FormHooks_bodyFixed__c3OA1);
+  // }
 
   return (
     <div className={styles.formSection}>
@@ -51,11 +66,13 @@ export const FormSection = () => {
           )
         })}
         <div className={styles.pripoliCont}>
-          <button type="button" className={styles.pripoliClick} onClick={openModal}>プライバシーポリシー</button>
+          <button type="button" className={styles.pripoliClick} onClick={openPripoliModal}>プライバシーポリシー</button>
           <span className={styles.pripoliText}>をご確認の上お問い合わせください。</span>
-          <PrivacyPolicyModal onClick={closeModal} modalCondition={isModalOpen}/>
+          <PrivacyPolicyModal onClick={closePripoliModal} modalCondition={isPripoliModalOpen}/>
         </div>
         <button type="submit" className={styles.submitBtn}>プライバシーポリシーに同意の上、送信</button>
       </form>
+      <SubmitModal onClick={closeSubmitModal} modalCondition={isSubmitModalOpen} 
+        success={submitSuccess} failed={submitFailed}/>
     </div>
 )}

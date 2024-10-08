@@ -1,0 +1,38 @@
+@import '../../../../styles/common';
+
+.navi {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    .naviList {
+        list-style: none;
+        color: $black;
+        padding: 0 24px;
+        background-color: $blue;
+        .naviListDetail {
+            background-color: $white;
+      
+            margin: 16px 0;
+            border-radius: 3px;
+            border-right: 8px solid $orange;
+            font-weight: 500;
+            cursor: pointer;
+            &:hover {
+                background-color: $orange;
+                color: $white;
+                font-weight: 600;
+                border-right: 8px solid $yellow;
+                .anchor {
+                    color: $white;
+                }
+            }
+        }
+        .anchor {
+            display: block;
+            text-decoration: none;
+            color: $black;
+            background-color: transparent;
+            padding: 16px;
+        }
+    }
+}

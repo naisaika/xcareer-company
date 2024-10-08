@@ -1,0 +1,11 @@
+@import "../../../../styles/common";
+
+.closeBtn {
+    background-color: $blue;
+    color: white;
+    padding: 8px 24px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, .3);
+    cursor: pointer;
+}
