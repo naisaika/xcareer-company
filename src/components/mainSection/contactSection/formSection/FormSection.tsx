@@ -1,21 +1,35 @@
 "use client";
 
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { formSchema } from "../../../../../lib/formSchema";
+import { z } from "zod";
 import { FORM } from "@/data/data";
 import styles from "./FormSection.module.scss"
-import { ContactForm } from "./formHooks/FormHooks"
 import { useState } from "react";
 import { PrivacyPolicyModal } from "@/components/modal/privacyPolicy/PrivacyPolicyModal";
 import { SubmitModal } from "@/components/modal/submit/SubmitModal";
-import { useModal } from "./formContext/FormContext";
+
+type FormValues = z.infer<typeof formSchema>;
 
 export const FormSection = () => {
-  const {isSubmitModalOpen, submitSuccess, submitFailed, closeSubmitModal} = useModal();
-  const [isPripoliModalOpen, setIsPripoliModalOpen] = useState(false);
-  // const [isSubmitModalOpen, setIsSubtmiModalOpen] = useState(false);
-  // const [submitSuccess, setSubmitSuccess] = useState(false);
-  // const [submitFailed, setSubmitFailed] = useState(false);
-  const { register, handleSubmit, formState: { errors } } = ContactForm();
 
+  const { register, handleSubmit, reset, formState: { errors } } = useForm<FormValues>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      companyname: "",
+      sendername: "",
+      position: "",
+      email: "",
+      tel: "",
+      content: "",
+    }
+  });
+
+  const [isPripoliModalOpen, setIsPripoliModalOpen] = useState(false);
+  const [isSubmitModalOpen, setIsSubtmiModalOpen] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [submitFailed, setSubmitFailed] = useState(false);
 
   const openPripoliModal = () => {
     setIsPripoliModalOpen(!isPripoliModalOpen);
@@ -26,18 +40,50 @@ export const FormSection = () => {
     setIsPripoliModalOpen(!isPripoliModalOpen);
     document.body.classList.remove(styles.bodyFixed);
   }
-  closeSubmitModal();
 
-  // const closeSubmitModal = () => {
-  //   setIsSubtmiModalOpen(false);
-  //   setSubmitSuccess(false);
-  //   setSubmitFailed(false);
-  //   document.body.classList.remove(styles.FormHooks_bodyFixed__c3OA1);
-  // }
+  const closeSubmitModal = () => {
+    setIsSubtmiModalOpen(!isSubmitModalOpen);
+    document.body.classList.remove(styles.bodyFixed);
+  }
+
+  const onSubmit = async (formvalue: FormValues) => {
+    try {
+        const response = await fetch("/api/apiTest", {
+        method: "POST", 
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formvalue),
+        });
+
+        if (!response.ok) {
+            setIsSubtmiModalOpen(true);
+            setSubmitSuccess(false)
+            setSubmitFailed(true);
+            document.body.classList.add(styles.bodyFixed);
+            throw new Error("通信エラーです。時間をおいて再度お試しください。");
+        }
+
+        // const data = await response.json();
+        setIsSubtmiModalOpen(true);
+        setSubmitSuccess(true);
+        setSubmitFailed(false)
+        document.body.classList.add(styles.bodyFixed);
+
+        reset();
+
+    } catch (error) {
+        console.error("送信失敗しました:", error);
+        setIsSubtmiModalOpen(true);
+        setSubmitSuccess(false);
+        setSubmitFailed(true);
+        document.body.classList.add(styles.bodyFixed);
+    }
+};
 
   return (
     <div className={styles.formSection}>
-      <form onSubmit={handleSubmit} className={styles.formCont}>
+      <form onSubmit={handleSubmit(onSubmit)} className={styles.formCont}>
         {FORM.map((form) => {
           return (
             <div className={styles.inputCont} key={form.id}>
@@ -72,7 +118,6 @@ export const FormSection = () => {
         </div>
         <button type="submit" className={styles.submitBtn}>プライバシーポリシーに同意の上、送信</button>
       </form>
-      <SubmitModal onClick={closeSubmitModal} modalCondition={isSubmitModalOpen} 
-        success={submitSuccess} failed={submitFailed}/>
+      <SubmitModal onClick={closeSubmitModal} modalCondition={isSubmitModalOpen} success={submitSuccess} failed={submitFailed}/>
     </div>
 )}

@@ -31,19 +31,22 @@
     width: 30%;
     font-size: 14px;
     font-weight: 500;
-    padding: 8px 0;
+    padding: 12px 0;
     border-bottom: 1px solid $blue;
+    line-height: 1.8;
 }
 
 .companyInfoCont dd {
     width: 70%;
     font-size: 14px;
     font-weight: 500;
-    padding: 8px 0;
+    padding: 12px 0;
     border-bottom: 1px solid $blue;
+    line-height: 1.8;
 }
 
 .companyInfoCont iframe {
     border: none;
-    padding: 16px;
+    padding: 24px;
+    width: 100%;
 }

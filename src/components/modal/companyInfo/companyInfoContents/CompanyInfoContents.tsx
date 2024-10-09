@@ -9,7 +9,7 @@ export const CompanyInfoContents = () => {
             <dt>創業</dt>
             <dd>1937年12月</dd>
             <dt>代表者</dt>
-            <dd>新美彰崇</dd>
+            <dd>新美 彰崇</dd>
             <dt>事業内容</dt>
             <dd>
                 フォークリフト用リフトブラケット製作<br />
@@ -40,6 +40,7 @@ export const CompanyInfoContents = () => {
                     title="半田重工業"
                     referrerPolicy="no-referrer-when-downgrade"
                     sandbox="allow-scripts allow-same-origin allow-popups"
+                    className={styles.map}
                 ></iframe>
       </div>
     );

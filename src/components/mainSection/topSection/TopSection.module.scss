@@ -5,6 +5,8 @@
     .titleCont {
         padding-top: 24px;
         background-color: $cream;
+        opacity: 0;
+        height: auto;
         .subTitle {
             margin: 16px 0 16px 48px;
             font-size: 22px;
@@ -28,10 +30,14 @@
         display: flex;
         align-items: center;
         justify-content: flex-start;
+        opacity: 0;
+        height: auto;
     }
     .descriptionCont {
         margin-top: 32px;
         background-color: $cream;
+        opacity: 0;
+        height: auto;
         .description {
             color: $orange;
             margin-left: 48px;
@@ -67,6 +73,7 @@
         display: flex;
         justify-content: center;
         background-color: $cream;
+        opacity: 0;
+        height: auto;
     }
 }
-

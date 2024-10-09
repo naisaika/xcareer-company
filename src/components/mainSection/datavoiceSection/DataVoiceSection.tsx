@@ -3,8 +3,6 @@ import styles from "./DataVoiceSection.module.scss";
 import { Voice } from "./voice/Voice";
 import { GraphData } from "./graphData/GraphData";
 import { DataTitleParts } from "./dataTitleParts/DataTitleParts";
-import { Element } from "react-scroll";
-
 
 const sectionId = 3;
 const titleText = TEXT_LIST.find((textId) => textId.id === sectionId);

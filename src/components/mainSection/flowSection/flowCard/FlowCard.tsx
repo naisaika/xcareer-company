@@ -1,7 +1,6 @@
 import {FLOW_IMG, FLOW_TITLE, FLOW_TEXT } from "@/data/data";
 import styles from "./FlowCard.module.scss"
-import Image from "next/image";
-import { FlowCardBtn } from "./flowCardBtn/FlowCardBtn";
+import { EachRowFlowCard } from "./eachrowflowcard/EachRowFlowCard";
 
 export const FlowCard = () => {
   return (
@@ -12,25 +11,10 @@ export const FlowCard = () => {
             const flowText = FLOW_TEXT.find((text) => text.id === img.id);
 
             return (
-                <li key={img.id} className={styles.flowList}>
-                    <Image src={img.img} alt={"流れカード画像"} width={216} height={132} priority className={styles.flowListImg}></Image>
-                    <p className={styles.flowListTitle}>{flowTitle && `${flowTitle.id + 1} . ${flowTitle.title}`}</p>
-                    <div className={styles.flowListTextCont}>
-                        {flowText ? (
-                            <p className={styles.flowListText}>
-                                {flowText.text}
-                                {flowText.id === 0 && (
-                                    <span className={styles.flowListText}>
-                                        <FlowCardBtn>{flowText.text2}</FlowCardBtn>
-                                        {flowText.text3}
-                                    </span>
-                                )}
-                            </p>
-                        ) : (
-                            <p>テキストがありません</p>
-                        )}
-                    </div>
-                </li>
+                <EachRowFlowCard key={img.id} id={img.id} img={img.img} 
+                    title={flowTitle?.title} text={flowText?.text} text2={flowText?.text2} 
+                    text3={flowText?.text3}>
+                </EachRowFlowCard>
             )
         })}
     </ul>

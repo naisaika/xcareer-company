@@ -4,11 +4,11 @@ import { CompanyInfoContents } from "./companyInfoContents/CompanyInfoContents"
 
 interface modalProps {
     modalCondition: boolean;
-    modalId: number;
+ 
     onClick: () => void;
   }
 
-export const CompanyInfo = ({modalCondition, modalId, onClick}: modalProps) => {
+export const CompanyInfo = ({modalCondition, onClick}: modalProps) => {
   return (
     <>
       {modalCondition && <div className={styles.modalBg} onClick={onClick}></div>}

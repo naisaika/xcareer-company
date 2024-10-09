@@ -121,11 +121,11 @@ export const PrivacyPolicyText = () => {
           <h4>機微な個人情報の取得制限</h4>
           <p>当社は、次に示す内容を含む個人情報の取得は原則として行いません。ただし、本人が自ら提供した場合は、この限りではありません。</p>
           <ol>
-              <li>A. 思想、信条及び宗教に関する事項</li>
-              <li>B. 人種、民族、門地、本籍地（所在都道府県に関する情報を除く）、身体・精神障害、犯罪歴、その他社会的差別の原因となる事項</li>
-              <li>C. 勤労者の団結権、団体交渉及びその他団体行動の行為に関する事項</li>
-              <li>D. 集団示威行為への参加、請願権の行使、及びその他政治的権利の行使に関する事項</li>
-              <li>E. 保健医療及び性生活</li>
+              <li className={styles.textIndent3}>A. 思想、信条及び宗教に関する事項</li>
+              <li className={styles.textIndent3}>B. 人種、民族、門地、本籍地（所在都道府県に関する情報を除く）、身体・精神障害、犯罪歴、その他社会的差別の原因となる事項</li>
+              <li className={styles.textIndent3}>C. 勤労者の団結権、団体交渉及びその他団体行動の行為に関する事項</li>
+              <li className={styles.textIndent3}>D. 集団示威行為への参加、請願権の行使、及びその他政治的権利の行使に関する事項</li>
+              <li className={styles.textIndent3}>E. 保健医療及び性生活</li>
           </ol>
       </div>
       <div className={styles.pripoliContents}>

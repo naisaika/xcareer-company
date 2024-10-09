@@ -1,6 +1,9 @@
+"use client";
+
 import { PointTitleParts } from "@/components/parts/pointTitleParts/PointTitleParts";
 import { COST_TEXT } from "../../../../data/data"
 import styles from "./CostCard.module.scss"
+import { useInView } from "react-intersection-observer"
 
 const POINT_ID = [
     { id: 0, text: "Point1"},
@@ -15,15 +18,21 @@ const POINT_DETAIL = [
 ]
 
 export const CostCard = () => {
+
+    const { ref, inView } = useInView({
+        rootMargin: "100px",
+        triggerOnce: true
+    });
+
   return (
-    <ul className={styles.cardCont}>
+    <ul className={styles.cardCont} ref={ref}>
         {POINT_ID.map((point) => {
 
             const pointDetail = POINT_DETAIL[point.id]; 
             const matchedText = COST_TEXT.find((text) => text.id === point.id);
 
             return (
-                <li className={styles.cardList} key={point.id}>
+                <li className={`${styles.cardList} ${inView && styles.rotateIn}`} key={point.id}>
                     <div className={styles.cardLeftCont}>
                         <PointTitleParts>{point.text}</PointTitleParts>
                         {pointDetail && 

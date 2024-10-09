@@ -68,7 +68,7 @@ export const Footer = () => {
         })}
     </div>
     {isModalOpen === 0 && (
-      <CompanyInfo onClick={closeModal} modalCondition={true} modalId={isModalOpen} />
+      <CompanyInfo onClick={closeModal} modalCondition={true} />
     )}
     {isModalOpen === 1 && (
       <PrivacyPolicyModal onClick={closeModal} modalCondition={true} />

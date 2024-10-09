@@ -8,21 +8,25 @@
     color: $orange;
     font-size: 24px;
     font-weight: 500;
+    background-color: transparent;
     .prPointNomal {
         padding-top: 40px;
         margin: 16px;
         font-weight: 600;
+        background-color: transparent;
     }
     .prPointStrong {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        background-color: transparent;
         .prPointStrongBlack {
             font-size: 28px;
             font-weight: 600;
             color: $black;
             margin-bottom: 8px;
+            background-color: transparent;
         }
         .prPointStrongOrange {
             font-size: 32px;
