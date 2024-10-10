@@ -27,14 +27,14 @@ export const CostSection = () => {
                     <span className={styles.prPointStrongBlack}>＼業界最安水準／</span>
                     <span className={styles.prPointStrongOrange}>完全成果報酬型</span>
                 </p>
-                <p className={styles.prPointNomal}>のサービスです。</p>
+                <p className={styles.prPointNomal2}>のサービスです。</p>
             </div>
             <div className={styles.prSubPointCont}>
                 <p className={styles.prSubPointNomal}>人材採用が決定するまで</p>
                 <p className={styles.prSubPointStrong}>料金は一切かかりません！</p>
             </div>
             <div className={styles.cardSection}>
-                <Image src="/cost/money.png" alt="無料画像" width={240} height={240} priority></Image>
+                <Image src="/cost/money.png" alt="無料画像" width={240} height={240} priority className={styles.costImg}></Image>
                 <CostCard/>
             </div>
         </div>

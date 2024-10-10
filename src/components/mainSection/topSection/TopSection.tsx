@@ -37,6 +37,7 @@ export const TopSection = () => {
 
   return (
     <section className={`${styles.topSection} ${fadeInClass}`} id="topSection" ref={ref}>
+      <div className={styles.titleImgSection}>
         <div className={`${styles.titleCont} ${inView && styles.fadeIn}`}>
             <p className={styles.subTitle}>工場・製造業のための人材紹介サービス</p>
             <h1 className={styles.mainTitle}>
@@ -46,18 +47,23 @@ export const TopSection = () => {
         <div className={`${styles.topImgCont} ${inView && styles.fadeInOpacity}`}>
             <Image src="/top-img.png" alt={"トップ画像"} width={760} height={480} priority className={styles.topImg}></Image>
         </div>
-        <div className={`${styles.descriptionCont} ${inView && styles.fadeIn}`}>
-            <p className={styles.description}>
-                <span className={styles.boxText}>求人募集</span>
-                <span className={styles.textNomal}>・</span>
-                <span className={styles.boxText}>人材採用</span>
-                <span className={styles.textSmall}>の</span>
-                <span className={styles.textNomal}>お困りごと解決！</span>
-            </p>
-        </div>
-        <div className={`${styles.inquryBtn} ${inView && styles.fadeIn}`}>
-            <InquiryButton/>
-        </div>
+      </div>
+      <div className={`${styles.descriptionCont} ${inView && styles.fadeIn}`}>
+          <p className={styles.description}>
+            <span className={styles.textStrongCont}>
+              <span className={styles.boxText}>求人募集</span>
+              <span className={styles.textNomal}>・</span>
+              <span className={styles.boxText}>人材採用</span>
+            </span>
+            <span className={styles.textNomalCont}>
+              <span className={styles.textSmall}>の</span>
+              <span className={styles.textNomal}>お困りごと解決！</span>
+            </span>
+          </p>
+      </div>
+      <div className={`${styles.inquryBtn} ${inView && styles.fadeIn}`}>
+          <InquiryButton/>
+      </div>
     </section>
   )
 }

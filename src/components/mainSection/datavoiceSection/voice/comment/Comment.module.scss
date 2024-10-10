@@ -3,16 +3,15 @@
 .commentSection {
     background-color: $cream;
     .commentCont {
-        margin: 0 auto;
+        margin: 0 24px;
         gap: 64px;
-         padding: 64px 0;
+        padding: 64px 0;
         background-color: $cream;
         list-style: none;
         margin-top: 24px;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        // @include mq ()
         
     }
-    
-    
 }

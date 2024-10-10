@@ -26,6 +26,18 @@
         align-items: center;
         justify-content: center;
         background-color: $cream;
+        @include mq (900px) {
+            padding: 16px 40px 24px;
+        }
+        @include mq (620px) {
+            padding: 16px 24px 24px;
+        }
+        @include mq (560px) {
+            padding: 16px 64px 24px;
+        }
+        @include mq (400px) {
+            padding: 16px 32px 24px;
+        }
         .flowListText {
             font-size: 14px;
             display: inline;

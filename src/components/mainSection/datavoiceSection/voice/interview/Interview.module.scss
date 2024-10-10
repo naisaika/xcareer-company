@@ -8,13 +8,23 @@
         padding: 64px 0;
         background-color: $blue;
         gap: 40px;
+        @include mq (900px) {
+            flex-direction: column;
+        }
         .imgCont {
             display: flex;
             flex-direction: column;
             background-color: $blue;
             gap: 24px;
+            @include mq (900px) {
+                align-items: center;
+            }
             .img {
                 border-radius: 10px;
+                @include mq (420px) {
+                    width: 80%;
+                    height: auto;
+                }
             }
         }
         .titleCont {
@@ -24,11 +34,20 @@
             justify-content: center;
             align-items: center;
             gap: 24px;
+            @include mq (900px) {
+                margin: 0 40px;
+            }
+            @include mq (420px) {
+                margin: 0 24px;
+            }
             .interviewTitle {
                 color: $orange;
                 font-size: 22px;
                 font-weight: 700;
                 background-color: $blue;
+                @include mq (400px) {
+                    font-size: 18px;
+                }
             }
             .interviewSummary {
                 color: $white;

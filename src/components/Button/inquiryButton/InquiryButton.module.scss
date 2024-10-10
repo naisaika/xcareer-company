@@ -26,5 +26,20 @@
         transform: rotate(-45deg);
         margin: 0 0 2px 32px;
         background-color: $orange;
+        @include mq (440px) {
+            width: 12px;
+            height: 12px;
+            border-right: solid 2px $white;
+            border-bottom: solid 2px $white;
+            margin: 0 0 2px 16px;
+        }
+    }
+    @include mq (540px) {
+        font-size: 24px;
+        padding: 16px 40px 12px;
+    }
+    @include mq (440px) {
+        font-size: 20px;
+        padding: 16px 24px 12px;
     }
 }

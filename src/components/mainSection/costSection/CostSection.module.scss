@@ -9,11 +9,37 @@
     font-size: 24px;
     font-weight: 500;
     background-color: transparent;
+    @include mq (800px) {
+        flex-direction: column;
+        margin-top: 40px;
+    }
     .prPointNomal {
         padding-top: 40px;
         margin: 16px;
         font-weight: 600;
         background-color: transparent;
+        @include mq (800px) {
+            font-size: 32px;
+            margin: 16px 0 24px;
+        }
+        @include mq (400px) {
+            font-size: 24px;
+        }
+    }
+    .prPointNomal2 {
+        padding-top: 40px;
+        margin: 16px;
+        font-weight: 600;
+        background-color: transparent;
+        @include mq (800px) {
+            font-size: 32px;
+            margin-top: 16px;
+            padding-top: 16px;
+            margin-left: 48px;
+        }
+        @include mq (400px) {
+            font-size: 24px;
+        }
     }
     .prPointStrong {
         display: flex;
@@ -27,6 +53,12 @@
             color: $black;
             margin-bottom: 8px;
             background-color: transparent;
+            @include mq (800px) {
+                font-size: 32px;
+            }
+            @include mq (400px) {
+                font-size: 28px;
+            }
         }
         .prPointStrongOrange {
             font-size: 32px;
@@ -36,6 +68,12 @@
             padding: 16px 24px;
             border-radius: 5px;
             letter-spacing: .1em;
+            @include mq (800px) {
+                font-size: 36px;
+            }
+            @include mq (400px) {
+                font-size: 32px;
+            }
         }
     }
 }
@@ -48,13 +86,41 @@
     color: $orange;
     font-size: 24px;
     font-weight: 500;
+    @include mq (660px) {
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 24px;
+    }
+    @include mq (400px){
+        margin-top: 8px;
+        gap: 8px;
+    }
     .prSubPointNomal {
         font-size: 20px;
         margin-top: 4px;
         margin-right: 8px;
+        @include mq (800px) {
+            font-size: 22px;
+        }
+        @include mq (660px) {
+            margin: 0;
+        }
+        @include mq (400px) {
+            font-size: 20px;
+        }
     }
     .prSubPointStrong {
         font-weight: 600;
+        margin-right: 8px;
+        @include mq (800px) {
+            font-size: 28px;
+        }
+        @include mq (660px) {
+            margin: 0 0 0 24px;
+        }
+        @include mq (400px) {
+            font-size: 24px;
+        }
     }
 }
 
@@ -63,6 +129,11 @@
     display: flex;
     gap: 64px;
     align-items: center;
+    .costImg {
+        @include mq (900px) {
+            display: none;
+        }
+    }
 }
 
 .contactBtnCont {
@@ -79,5 +150,14 @@
     gap: 24px;
     .contactText {
         background-color: $cream;
+    }
+    @include mq (540px) {
+        font-size: 18px;
+    }
+    @include mq (400px) {
+        font-size: 16px;
+    }
+    @include mq (350px) {
+        font-size: 14px;
     }
 }

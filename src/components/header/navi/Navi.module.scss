@@ -4,14 +4,34 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    @include mq (1350px) {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        transition: top 0.5s ease;
+        z-index: 10;
+    }
+    &.open {
+        top: 100px;
+        will-change: top;
+    }
     .naviList {
         list-style: none;
         color: $black;
         padding: 0 24px;
         background-color: $blue;
+        @include mq (1350px) {
+            padding: 40px 80px;
+            transition: height 0.5s ease;
+            height: 100vh;
+        }
+        @include mq (540px) {
+            padding: 40px 24px;
+        }
         .naviListDetail {
             background-color: $white;
-      
             margin: 16px 0;
             border-radius: 3px;
             border-right: 8px solid $orange;
@@ -36,3 +56,4 @@
         }
     }
 }
+

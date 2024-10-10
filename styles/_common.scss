@@ -7,9 +7,19 @@ $yellow: #E0A009;
 $cream: #FDFAEA;
 $ornage-shadow: #954801;
 
+/*responsive template*/
+@mixin mq ($width) {
+  @media screen and (max-width: $width) {
+      @content;
+  }
+}
+
 /*section style*/
 .section {
     padding: 80px 0;
+    @include mq (400px) {
+      padding: 40px 0;
+    }
 }
 
 /*wrapper*/
@@ -22,9 +32,22 @@ $ornage-shadow: #954801;
 .sectionText{
     color: $black;
     font-size: 16px;
-    text-align: center;
+    text-align: justify;
+    margin: 120px 24px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-weight: 400;
     margin: 120px 0 80px;
+    @include mq (760px) {
+      margin: 120px 24px 80px;
+  }
+   @include mq (640px) {
+      align-items: flex-start;
+  }
+  @include mq (375px) {
+      margin: 80px 24px 64px;
+  }
 }
 
 /*h2 style*/
@@ -43,6 +66,12 @@ $ornage-shadow: #954801;
         height: 72px;
         background-color: $white;
         margin-right: 48px;
+        @include mq (500px) {
+          margin-right: 24px;
+        }
+        @include mq (375px) {
+          height: 56px;
+        }
     }
     &::after {
         content: '';
@@ -51,6 +80,18 @@ $ornage-shadow: #954801;
         height: 72px;
         background-color: $white;
         margin-left: 48px;
+        @include mq (500px) {
+          margin-left: 24px;
+        }
+        @include mq (375px) {
+          height: 56px;
+        }
+    }
+    @include mq (500px) {
+      font-size: 24px;
+    }
+    @include mq (375px) {
+      font-size: 20px;
     }
 }
 
@@ -162,9 +203,3 @@ $ornage-shadow: #954801;
     }
 }
 
-/*responsive template*/
-@mixin mq ($width) {
-  @media screen and (max-width: $width) {
-      @content;
-  }
-}

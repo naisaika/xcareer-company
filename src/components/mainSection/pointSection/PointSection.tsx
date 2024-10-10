@@ -11,8 +11,10 @@ export const PointSection = () => {
       <section className={styles.section} id="pointSection" >
         <h2 className={`${styles.sectionTitle} ${styles.adjustOpacity}`}>{titleText && titleText.title}</h2>
         <div className={styles.wrapper}>
-            <p className={styles.sectionText}>Factor Xキャリアは、工場・製造業の企業様のための人材紹介サービスです。<br></br>
-                専門のエージェントが貴社の採用課題に寄り添い、採用活動をご支援いたします。</p>
+            <p className={styles.sectionText}>
+              <span>Factor Xキャリアは、工場・製造業の企業様のための人材紹介サービスです。</span>
+              <span>専門のエージェントが貴社の採用課題に寄り添い、採用活動をご支援いたします。</span>
+            </p>
             <PointCard/>
         </div>
       </section>
