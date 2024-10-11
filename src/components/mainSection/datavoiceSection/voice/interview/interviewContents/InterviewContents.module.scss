@@ -27,6 +27,10 @@
             @include mq (460px) {
                 margin: 0 24px;
             }
+            @include mq (390px) {
+                margin: 0 16px;
+                padding: 16px;
+            }
         }
         .answerCont {
             display: flex;
@@ -36,6 +40,9 @@
             }
             @include mq (460px) {
                 padding: 0 24px;
+            }
+            @include mq (390px) {
+                padding: 0 16px;
             }
             .answerName {
                 color: $orange;
@@ -56,6 +63,9 @@
                 text-align: justify;
                 font-size: 14px;
                 box-shadow: 4px 4px 5px rgba(0, 0, 0, .3);
+                @include mq (390px) {
+                    padding: 16px;
+                }
             }
         }
         .line {
@@ -68,8 +78,11 @@
     }
     .closeBtn {
         text-align: center;
+        @include mq (400px) {
+            text-align: start;
+            margin: 0 15vw;
+        }
     }    
 }
-
 
 

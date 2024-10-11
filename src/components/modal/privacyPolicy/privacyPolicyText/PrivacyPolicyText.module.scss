@@ -4,11 +4,16 @@
     color: $black;
     font-size: 14px;
     max-width: 420px;
-    margin: 80px auto 40px;
-    max-height: 420px;
+    margin: 64px auto 0;
+    max-height: 60vh;
     overflow-y: scroll;
-    border-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     text-align: left;
+    padding: 24px;
+    @include mq (500px) {
+        font-size: 12px;
+    }
     &::-webkit-scrollbar {
         background: $cream;
         width: 6px;
@@ -49,5 +54,9 @@
 
 .pripoliCont ul {
     list-style: none;
+}
+
+.pripoliCont p {
+    text-align: justify;
 }
 

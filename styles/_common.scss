@@ -47,6 +47,7 @@ $ornage-shadow: #954801;
   }
   @include mq (375px) {
       margin: 80px 24px 64px;
+      font-size: 14px;
   }
 }
 
@@ -87,7 +88,7 @@ $ornage-shadow: #954801;
           height: 56px;
         }
     }
-    @include mq (500px) {
+    @include mq (550px) {
       font-size: 24px;
     }
     @include mq (375px) {
@@ -128,7 +129,7 @@ $ornage-shadow: #954801;
 /*inview delayFadein*/
 .delayFadeIn {
   animation: fadeIn 1.5s ease-in forwards;
-  animation-delay: .6s;
+  animation-delay: .5s;
 }
 
 @keyframes delayFadeIn {
@@ -159,7 +160,7 @@ $ornage-shadow: #954801;
 /*inview scale*/
 .scale {
     animation: inviewScale 1s ease-in forwards;
-    animation-delay: .6s;
+    animation-delay: .3s;
 }
 
 @keyframes inviewScale {
@@ -173,7 +174,7 @@ $ornage-shadow: #954801;
 
 .rotateIn {
     animation: rotateIn 1.5s ease-in forwards;
-    animation-delay: .6s;
+    animation-delay: .5s;
 }
   
   @keyframes rotateIn {
@@ -189,7 +190,7 @@ $ornage-shadow: #954801;
 
 .rotateRightIn {
     animation: rotateRightIn 1.5s ease-in forwards;
-    animation-delay: .6s;
+    animation-delay: .5s;
   }
   
   @keyframes rotateRightIn {

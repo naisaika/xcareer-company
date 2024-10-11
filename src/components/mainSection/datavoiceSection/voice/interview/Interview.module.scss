@@ -55,6 +55,9 @@
                 text-align: justify;
                 font-weight: 300;
                 margin-bottom: 16px;
+                @include mq (400px) {
+                    font-size: 14px;
+                }
             }
             .detailViewBtnCont {
                 background-color: $blue;

@@ -5,7 +5,14 @@
     border-radius: 5px;
     border: solid 1px $blue;
     padding: 40px 56px;
-    margin-top: 24px;
+    margin: 24px 40px;
+    @include mq (440px) {
+        margin: 24px;
+        padding: 40px 24px;
+    }
+    @include mq (360px) {
+        margin: 24px 16px;
+    }
     .telCont {
         display: flex;
         align-items: center;
@@ -20,6 +27,12 @@
         }
         .telText {
             background-color: $cream;
+            @include mq (400px) {
+                font-size: 28px;
+            }
+            @include mq (375px) {
+                font-size: 24px;
+            }
         }
     }
     .telTime {
@@ -29,5 +42,28 @@
         font-size: 18px;
         font-weight: 600;
         margin-top: 8px;
+        @include mq (550px) {
+            display: flex;
+            justify-content: center;
+        }
+        @include mq (400px) {
+            font-size: 16px;
+        }
+        .acceptTimetitle {
+            background-color: $cream;
+        }
+        .acceptTimeCont {
+            @include mq (550px) {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+            }
+            .acceptTime {
+                background-color: $cream;
+            }
+            .acceptTime {
+                background-color: $cream;
+            }
+        }
     }
 }

@@ -13,7 +13,8 @@ interface EachPointCardProps {
 
 export const EachPointCard = ({ id, img, title, text }: EachPointCardProps) => {
     const { ref, inView } = useInView({
-      rootMargin: "200px",
+      rootMargin: "0px", 
+      threshold: 0.3, 
       triggerOnce: true,
     });
   

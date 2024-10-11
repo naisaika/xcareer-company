@@ -20,8 +20,9 @@ const POINT_DETAIL = [
 export const CostCard = () => {
 
     const { ref, inView } = useInView({
-        rootMargin: "100px",
-        triggerOnce: true
+        rootMargin: "0px", 
+        threshold: 0.3, 
+        triggerOnce: true,
     });
 
   return (

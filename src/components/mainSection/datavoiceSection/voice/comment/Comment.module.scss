@@ -2,8 +2,8 @@
 
 .commentSection {
     background-color: $cream;
+    padding: 0 24px;
     .commentCont {
-        margin: 0 24px;
         gap: 64px;
         padding: 64px 0;
         background-color: $cream;
@@ -11,7 +11,8 @@
         margin-top: 24px;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        // @include mq ()
-        
+        @include mq (900px) {
+            gap: 32px;
+        }
     }
 }

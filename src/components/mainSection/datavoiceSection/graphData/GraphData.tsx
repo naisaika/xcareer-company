@@ -7,8 +7,9 @@ import { GraphCard } from "../graphCard/GraphCard"
 export const GraphData = () => {
 
   const { ref, inView } = useInView({
-    rootMargin: "0px",
-    triggerOnce: true
+    rootMargin: "0px", 
+    threshold: 0.3, 
+    triggerOnce: true,
   });
 
   return (

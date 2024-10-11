@@ -2,8 +2,8 @@
 
 .topSection {
     background-color: $cream;
-    @include mq (1350px) {
-        margin-top: 85px;
+    @include mq (1200px) {
+        padding-top: 61px;
     }
     .titleImgSection {
         @include mq (960px) {
@@ -15,6 +15,9 @@
             background-color: $cream;
             opacity: 0;
             height: auto;
+            @include mq (550px) {
+                padding-top: 8px;
+            }
             .subTitle {
                 margin: 16px 0 16px 48px;
                 font-size: 22px;
@@ -24,7 +27,7 @@
                     text-align: center;
                     margin: 16px 0;
                 }
-                @include mq (500px) {
+                @include mq (550px) {
                     font-size: 18px;
                 }
                 @include mq (375px) {
@@ -81,7 +84,7 @@
         background-color: $cream;
         opacity: 0;
         height: auto;
-        @include mq (400px) {
+        @include mq (550px) {
             margin-top: 8px;
         }
         .description {
@@ -112,13 +115,13 @@
                     font-size: 32px;
                     margin: 16px 0;
                 }
-                @include mq (500px) {
+                @include mq (550px) {
                     padding: 8px 16px;
                     font-size: 28px;
                 }
                 @include mq (360px) {
                     padding: 8px 16px;
-                    font-size: 24px;
+                    font-size: 20px;
                 }
             }
             .textNomalCont {
@@ -126,7 +129,7 @@
                 @include mq (700px) {
                     margin-top: 16px;
                 }
-                @include mq (500px) {
+                @include mq (550px) {
                     margin-top: 0;
                 }
             }
@@ -140,8 +143,11 @@
                 font-size: 28px;
                 font-weight: 700;
                 background-color: $cream;
-                @include mq (380px) {
+                @include mq (550px) {
                     font-size: 24px;
+                }
+                @include mq (400px) {
+                    font-size: 22px;
                 }
             }
         }

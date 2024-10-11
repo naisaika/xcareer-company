@@ -22,13 +22,15 @@ export const EachComment = ({
     personName, comment}: EachCommentProps) => {
 
     const { ref, inView } = useInView({
-        rootMargin: "100px",
-        triggerOnce: true
+        rootMargin: "0px", 
+        threshold: 0.3, 
+        triggerOnce: true,
     });
 
   return (
     <li className={`${styles.commentList} ${inView && styles.rotateRightIn}`} ref={ref}>
         <PersonPicture pictureImg={img}></PersonPicture>
+        <div>
         <div className={styles.commentListBox}>
             <PointTitleParts>{companyName && companyText}</PointTitleParts>
             <div className={styles.personInfo}>
@@ -40,6 +42,8 @@ export const EachComment = ({
             <div className={styles.line}></div>
             <div className={styles.commentText}>{comment && comment}</div>
         </div>
+        </div>
+
     </li>
   )
 }

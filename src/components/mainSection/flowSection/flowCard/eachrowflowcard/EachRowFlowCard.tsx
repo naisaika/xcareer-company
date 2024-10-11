@@ -17,8 +17,9 @@ interface EachRowFlowCard {
 export const EachRowFlowCard = ({id, img, title, text, text2, text3}:EachRowFlowCard) => {
 
     const { ref, inView } = useInView({
-        rootMargin: "100px",
-        triggerOnce: true
+        rootMargin: "0px", 
+        threshold: 0.3, 
+        triggerOnce: true,
     });
 
   return (

@@ -3,7 +3,7 @@
 .mainSection {
     background-color: $white;
     margin-left: 20vw;
-    @include mq (1350px) {
+    @include mq (1200px) {
         margin-left: 0;
     }
 }

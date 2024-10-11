@@ -4,9 +4,9 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    @include mq (1350px) {
+    @include mq (1200px) {
         position: fixed;
-        top: -100%;
+        top: -200vh;
         left: 0;
         width: 100vw;
         height: 100vh;
@@ -14,7 +14,7 @@
         z-index: 10;
     }
     &.open {
-        top: 100px;
+        top: 60px;
         will-change: top;
     }
     .naviList {
@@ -22,13 +22,23 @@
         color: $black;
         padding: 0 24px;
         background-color: $blue;
-        @include mq (1350px) {
+        @include mq (1200px) {
             padding: 40px 80px;
             transition: height 0.5s ease;
             height: 100vh;
+            overflow-y: auto;
+            &::-webkit-scrollbar {
+                background: $cream;
+                width: 6px;
+                height: 6px;
+            }
+            &::-webkit-scrollbar-thumb {
+                background-color: $yellow;
+                border-radius: 5px;
+            }
         }
-        @include mq (540px) {
-            padding: 40px 24px;
+        @include mq (500px) {
+            padding: 8px 24px;
         }
         .naviListDetail {
             background-color: $white;
@@ -53,6 +63,7 @@
             color: $black;
             background-color: transparent;
             padding: 16px;
+            font-size: 14px;
         }
     }
 }

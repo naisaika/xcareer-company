@@ -91,7 +91,7 @@ export const FormSection = () => {
                 <label htmlFor={form.id} className={styles.label}>
                   <div className={styles.labelTextarea}>
                     <span className={styles.labelText}>{form.label}</span>
-                    <span className={styles.labelText}>{form.label2}</span>
+                    <span className={styles.labelText2}>{form.label2}</span>
                   </div>
                   <span className={styles.required}>必須</span>
                 </label>

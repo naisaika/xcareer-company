@@ -33,7 +33,6 @@ export const TopSection = () => {
           setFadeInClass("");
         }
       }, [inView]);
-  
 
   return (
     <section className={`${styles.topSection} ${fadeInClass}`} id="topSection" ref={ref}>

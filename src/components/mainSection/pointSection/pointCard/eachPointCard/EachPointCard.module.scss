@@ -40,6 +40,9 @@
             @include mq (740px) {
                 margin: 0 0 32px 0;
             }
+            @include mq (340px) {
+                font-size: 14px;
+            }
         }
         .pointText {
             font-size: 14px;

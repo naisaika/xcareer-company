@@ -13,8 +13,9 @@ const sectionTitle = TEXT_LIST.find((title) => title.id === sectionId)
 export const CostSection = () => {
 
     const { ref, inView } = useInView({
-        rootMargin: "0px",
-        triggerOnce: true
+        rootMargin: "0px", 
+        threshold: 0.3, 
+        triggerOnce: true,
     });
 
   return (

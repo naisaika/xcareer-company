@@ -5,12 +5,24 @@
     display: flex;
     justify-content: center;
     padding: 48px;
+    @include mq (860px) {
+        flex-direction: column;
+    }
+    @include mq (440px) {
+        padding: 32px 24px;
+    }
     .footerCont {
         background-color: $blue;
         display: flex;
+        @include mq (860px) {
+            flex-direction: column;
+        }
         .footerContents {
             background-color: $blue;
             margin-top: 40px;
+            @include mq (860px) {
+                margin-top: 0;
+            }
             .footerTitle {
                 color: $orange;
                 font-weight: 600;
@@ -24,6 +36,9 @@
                 margin-top: 24px;
                 .footerListText {
                     margin: 8px 0 16px;
+                    @include mq (470px) {
+                        font-size: 14px;
+                    }
                     .footerText {
                         background-color: $blue;
                         color: $white;
@@ -84,6 +99,11 @@
         height: 200px;
         background-color: $white;
         margin: 0 80px;
+        @include mq (860px) {
+            width: 100%;
+            height: 1px;
+            margin: 40px 0;
+        }
     }
 }
 

@@ -1,12 +1,20 @@
+"use client";
+
 import styles from './Navi.module.scss';
 import { TEXT_LIST } from '../../../data/data';
 import Link from 'next/link';
 
 interface NaviProps {
   isNaviOpen: boolean;
+  setIsNaviOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-export const Navi = ({isNaviOpen}: NaviProps) => {
+export const Navi = ({isNaviOpen, setIsNaviOpen}: NaviProps) => {
+
+  const handleNaviClick = () =>{
+    setIsNaviOpen(false);
+  }
+
   return (
     <nav className={`${styles.navi} ${isNaviOpen ? styles.open : ''}`}>
       <ul className={styles.naviList}>
@@ -18,6 +26,7 @@ export const Navi = ({isNaviOpen}: NaviProps) => {
               target="_blank"
               rel="noopener noreferrer"
               className={styles.anchor}
+              onClick={handleNaviClick}
             >
               {navi.title}
             </Link>
@@ -25,6 +34,7 @@ export const Navi = ({isNaviOpen}: NaviProps) => {
             <Link
               href={`#${navi.anchorlink}`}
               className={styles.anchor}
+              onClick={handleNaviClick}
             >
               {navi.title}
             </Link>
