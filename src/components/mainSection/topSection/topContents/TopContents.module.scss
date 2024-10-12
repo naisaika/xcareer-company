@@ -1,0 +1,161 @@
+@import "../../../../../styles/common";
+
+.topSectionCont {
+    opacity: 0;
+    .titleImgSection {
+        @include mq (960px) {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        .titleCont {
+            padding-top: 24px;
+            background-color: $cream;
+            opacity: 0;
+            height: auto;
+            @include mq (550px) {
+                padding-top: 8px;
+            }
+            .subTitle {
+                margin: 16px 0 16px 48px;
+                font-size: 22px;
+                color: $black;
+                background-color: $cream;
+                @include mq (960px) {
+                    text-align: center;
+                    margin: 16px 0;
+                }
+                @include mq (550px) {
+                    font-size: 18px;
+                }
+                @include mq (380px) {
+                    font-size: 16px;
+                }
+            }
+            .mainTitle {
+                background-color: $blue;
+                display: inline-block;
+                padding: 8px 48px;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+                margin-bottom: 32px;
+                @include mq (960px) {
+                    width: 100%;
+                    text-align: center;
+                    padding: 16px 48px;
+                    border-radius: none;
+                }
+                @include mq (500px) {
+                    padding: 8px 48px;
+                }
+                .titleImg {
+                    background-color: $blue;
+                    @include mq (960px) {
+                        width: 60vw;
+                        height: auto;
+                    }
+                    @include mq (500px) {
+                        width: 70vw;
+                        height: auto;
+                        margin-top: 8px;
+                    }
+                }
+            }
+        }    
+    }
+    .topImgCont {
+        background-color: $blue;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        opacity: 0;
+        height: auto;
+        .topImg {
+            @include mq (960px) {
+                width: 100vw;
+                height: auto;
+            }
+        }
+    }
+    .descriptionCont {
+        padding: 32px 0 8px;
+        background-color: $cream;
+        opacity: 0;
+        height: auto;
+        @include mq (550px) {
+            padding: 8px 0 0;
+        }
+        .description {
+            color: $orange;
+            margin-left: 48px;
+            display: flex;
+            align-items: center;
+            background-color: $cream;
+            @include mq (700px) {
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+                margin-left: 0;
+            }
+            .textStrongCont {
+                background-color: $cream;
+            }
+            .boxText {
+                background-color: $yellow;
+                color: $white;
+                font-size: 28px;
+                font-weight: 600;
+                padding: 8px 16px;
+                border-radius: 5px;
+                letter-spacing: .1em;
+                @include mq (700px) {
+                    padding: 16px 24px;
+                    font-size: 32px;
+                    margin: 16px 0;
+                }
+                @include mq (550px) {
+                    padding: 8px 16px;
+                    font-size: 28px;
+                }
+                @include mq (380px) {
+                    padding: 8px 16px;
+                    font-size: 20px;
+                }
+            }
+            .textNomalCont {
+                background-color: $cream;
+                @include mq (700px) {
+                    margin-top: 16px;
+                }
+                @include mq (550px) {
+                    margin-top: 0;
+                }
+            }
+            .textSmall {
+                font-size: 20px;
+                font-weight: 600;
+                margin: 0 8px;
+                background-color: $cream;
+            }
+            .textNomal {
+                font-size: 28px;
+                font-weight: 700;
+                background-color: $cream;
+                @include mq (550px) {
+                    font-size: 24px;
+                }
+                @include mq (400px) {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    .inquryBtn {
+        margin-bottom: 64px;
+        padding: 40px 0 64px;
+        display: flex;
+        justify-content: center;
+        background-color: $cream;
+        opacity: 0;
+    }
+}
+
