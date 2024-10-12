@@ -85,6 +85,15 @@
                 &::placeholder {
                     font-size: 16px;
                 }
+                &::-webkit-scrollbar {
+                    background: $cream;
+                    width: 6px;
+                    height: 6px;
+                }
+                &::-webkit-scrollbar-thumb {
+                    background-color: $yellow;
+                    border-radius: 5px;
+                }
             }
             .errorMsg {
                 color: $orange;

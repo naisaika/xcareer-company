@@ -25,10 +25,10 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 16px;
+            gap: 24px;
             padding: 24px 32px;
             margin-top: 16px;
-            min-height: 420px;
+            min-height: 460px;
             @include mq (900px) {
                 justify-content: center;
                 margin: 16px auto;

@@ -6,7 +6,7 @@ export const Comment = () => {
 
     return (
         <div className={styles.commentSection}>
-            <div className={styles.wrapper}>
+            <div className={`${styles.bg} ${styles.wrapper}`}>
                 <ul className={styles.commentCont}>
                     {PERSON_PICTURE.map((picture) => {
 

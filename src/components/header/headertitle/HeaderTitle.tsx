@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import styles from "./HeaderTitle.module.scss"
+import Link from "next/link";
 
 interface HeaderTitleProps {
   naviClick: () => void;
@@ -18,9 +19,9 @@ export const HeaderTitle = ({naviClick, isNaviOpen, setIsNaviOpen}: HeaderTitleP
 
   return (
     <div className={styles.headerTitleSec}>
-        <div className={styles.headerTitleLink}>
+        <Link href="#" className={styles.headerTitleLink}>
           <Image src="/logo.png" alt={"Factor Xキャリアロゴ"}width={208} height={32} priority className={styles.headerTitle} onClick={handleLogoClick}></Image>
-        </div>
+        </Link>
         <div className={`${styles.naviOpenCont} ${isNaviOpen ? styles.open : ''}`} onClick={naviClick}>
           <span className={`${isNaviOpen? styles.naviCloseLine1: styles.naviOpenLine}`}></span>
           <span className={`${isNaviOpen? styles.naviCloseLine2: styles.naviOpenLine}`}></span>

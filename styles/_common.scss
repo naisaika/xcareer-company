@@ -45,7 +45,7 @@ $ornage-shadow: #954801;
    @include mq (640px) {
       align-items: flex-start;
   }
-  @include mq (375px) {
+  @include mq (380px) {
       margin: 80px 24px 64px;
       font-size: 14px;
   }
@@ -129,7 +129,7 @@ $ornage-shadow: #954801;
 /*inview delayFadein*/
 .delayFadeIn {
   animation: fadeIn 1.5s ease-in forwards;
-  animation-delay: .5s;
+  animation-delay: .2s;
 }
 
 @keyframes delayFadeIn {
@@ -160,7 +160,7 @@ $ornage-shadow: #954801;
 /*inview scale*/
 .scale {
     animation: inviewScale 1s ease-in forwards;
-    animation-delay: .3s;
+    animation-delay: .2s;
 }
 
 @keyframes inviewScale {
@@ -174,7 +174,7 @@ $ornage-shadow: #954801;
 
 .rotateIn {
     animation: rotateIn 1.5s ease-in forwards;
-    animation-delay: .5s;
+    animation-delay: .2s;
 }
   
   @keyframes rotateIn {
@@ -190,7 +190,7 @@ $ornage-shadow: #954801;
 
 .rotateRightIn {
     animation: rotateRightIn 1.5s ease-in forwards;
-    animation-delay: .5s;
+    animation-delay: .2s;
   }
   
   @keyframes rotateRightIn {

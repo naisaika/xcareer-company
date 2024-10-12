@@ -11,9 +11,26 @@ interface NaviProps {
 
 export const Navi = ({isNaviOpen, setIsNaviOpen}: NaviProps) => {
 
-  const handleNaviClick = () =>{
+  const handleNaviClick = (anchorlink: string) => {
+    const headerHeight = 61;
+    const viewportWidth = window.innerWidth;
+
+    if (viewportWidth <= 1200) {
+      setTimeout(() => {
+        const targetElement = document.querySelector(anchorlink);
+        if (targetElement) {
+          const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+          window.scrollTo({
+            top: elementPosition - headerHeight,
+            behavior: 'smooth',
+          });
+        }
+      }, 500);
+    }
+
     setIsNaviOpen(false);
-  }
+  };
+
 
   return (
     <nav className={`${styles.navi} ${isNaviOpen ? styles.open : ''}`}>
@@ -26,7 +43,7 @@ export const Navi = ({isNaviOpen, setIsNaviOpen}: NaviProps) => {
               target="_blank"
               rel="noopener noreferrer"
               className={styles.anchor}
-              onClick={handleNaviClick}
+              onClick={() => handleNaviClick(navi.anchorlink)}
             >
               {navi.title}
             </Link>
@@ -34,7 +51,7 @@ export const Navi = ({isNaviOpen, setIsNaviOpen}: NaviProps) => {
             <Link
               href={`#${navi.anchorlink}`}
               className={styles.anchor}
-              onClick={handleNaviClick}
+              onClick={() => handleNaviClick(`#${navi.anchorlink}`)}
             >
               {navi.title}
             </Link>

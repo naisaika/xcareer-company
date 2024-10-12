@@ -3,6 +3,9 @@
 .commentSection {
     background-color: $cream;
     padding: 0 24px;
+    .bg {
+        background-color: $cream;
+    }
     .commentCont {
         gap: 64px;
         padding: 64px 0;
