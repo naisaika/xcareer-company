@@ -30,6 +30,7 @@ export const FormSection = () => {
   const [isSubmitModalOpen, setIsSubtmiModalOpen] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [submitFailed, setSubmitFailed] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const openPripoliModal = () => {
     setIsPripoliModalOpen(!isPripoliModalOpen);
@@ -47,39 +48,41 @@ export const FormSection = () => {
   }
 
   const onSubmit = async (formvalue: FormValues) => {
+    setIsLoading(true);
+  
     try {
-        const response = await fetch("/api/apiTest", {
-        method: "POST", 
+      const response = await fetch("/api/apiTest", {
+        method: "POST",
         headers: {
-            "Content-Type": "application/json",
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(formvalue),
-        });
-
-        if (!response.ok) {
-            setIsSubtmiModalOpen(true);
-            setSubmitSuccess(false)
-            setSubmitFailed(true);
-            document.body.classList.add(styles.bodyFixed);
-            throw new Error("通信エラーです。時間をおいて再度お試しください。");
-        }
-
-        // const data = await response.json();
-        setIsSubtmiModalOpen(true);
-        setSubmitSuccess(true);
-        setSubmitFailed(false)
-        document.body.classList.add(styles.bodyFixed);
-
-        reset();
-
-    } catch (error) {
-        console.error("送信失敗しました:", error);
-        setIsSubtmiModalOpen(true);
+      });
+  
+      if (!response.ok) {
         setSubmitSuccess(false);
         setSubmitFailed(true);
         document.body.classList.add(styles.bodyFixed);
+        throw new Error("通信エラーです。時間をおいて再度お試しください。");
+      }
+  
+      // const data = await response.json();
+      setSubmitSuccess(true);
+      setSubmitFailed(false);
+      document.body.classList.add(styles.bodyFixed);
+      reset();
+  
+    } catch (error) {
+      setSubmitSuccess(false);
+      setSubmitFailed(true);
+      document.body.classList.add(styles.bodyFixed);
+      console.error("送信失敗しました:", error);
+      
+    } finally {
+      setIsLoading(false); 
+      setIsSubtmiModalOpen(true); 
     }
-};
+  };
 
   return (
     <div className={styles.formSection}>
@@ -116,7 +119,8 @@ export const FormSection = () => {
           <span className={styles.pripoliText}>をご確認の上お問い合わせください。</span>
           <PrivacyPolicyModal onClick={closePripoliModal} modalCondition={isPripoliModalOpen}/>
         </div>
-        <button type="submit" className={styles.submitBtn}>プライバシーポリシーに同意の上、送信</button>
+        <button type="submit" className={`${styles.submitBtn} ${isLoading? styles.submitting: ""}`} disabled={isLoading}>
+          {isLoading? "送信中です…" : "プライバシーポリシーに同意の上、送信" }</button>
       </form>
       <SubmitModal onClick={closeSubmitModal} modalCondition={isSubmitModalOpen} success={submitSuccess} failed={submitFailed}/>
     </div>

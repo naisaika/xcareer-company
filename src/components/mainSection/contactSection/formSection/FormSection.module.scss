@@ -154,3 +154,12 @@
 .bodyFixed {
     overflow: hidden;
 }
+
+.submitting {
+    opacity: .5;
+    box-shadow: none !important;
+    cursor: not-allowed !important;
+    &:hover {
+        transform: none !important;  
+    }
+}
