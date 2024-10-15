@@ -20,6 +20,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
+      <head>
+        <meta property="og:title" content="FactorXキャリア－工場・製造業のための人材紹介サービス－" />
+        <meta property="og:description" content="Factor Xキャリアは、工場・製造業のための人材紹介サービスです。" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.factorx.jp/xcareer-company" />
+        <meta property="og:image" content="https://www.factorx.jp/xcareer-company/og-image.png" />
+        <meta property="og:site_name" content="FactorXキャリア－工場・製造業のための人材紹介サービス－" />
+        <meta property="og:locale" content="ja_JP"/>
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="FactorXキャリア－工場・製造業のための人材紹介サービス－" />
+        <meta name="twitter:description" content="Factor Xキャリアは、工場・製造業のための人材紹介サービスです。" />
+        <meta name="twitter:image" content="https://www.factorx.jp/xcareer-company/og-image.png" />
+      </head>
       <body className={NotoSansJPFont.className}>
         <Header/>
         {children}
