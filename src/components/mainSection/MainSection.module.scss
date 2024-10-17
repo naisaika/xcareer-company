@@ -3,7 +3,21 @@
 .mainSection {
     background-color: $white;
     margin-left: 20vw;
+    min-height: max-content;
     @include mq (1200px) {
         margin-left: 0;
+    }
+}
+
+.opacity {
+    animation: opacity 2.5s ease-in forwards;
+  }
+  
+  @keyframes opacity {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
     }
 }

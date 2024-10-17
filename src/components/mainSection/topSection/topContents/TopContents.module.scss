@@ -2,7 +2,9 @@
 
 .topSectionCont {
     opacity: 0;
+    background-color: $cream;
     .titleImgSection {
+        background-color: $cream;
         @include mq (960px) {
             display: flex;
             flex-direction: column-reverse;
@@ -11,7 +13,6 @@
             padding-top: 24px;
             background-color: $cream;
             opacity: 0;
-            height: auto;
             @include mq (550px) {
                 padding-top: 8px;
             }
@@ -68,7 +69,6 @@
         align-items: center;
         justify-content: flex-start;
         opacity: 0;
-        height: auto;
         .topImg {
             @include mq (960px) {
                 width: 100vw;
@@ -80,7 +80,6 @@
         padding: 32px 0 8px;
         background-color: $cream;
         opacity: 0;
-        height: auto;
         @include mq (550px) {
             padding: 8px 0 0;
         }

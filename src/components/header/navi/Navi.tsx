@@ -19,7 +19,7 @@ export const Navi = ({isNaviOpen, setIsNaviOpen}: NaviProps) => {
       setTimeout(() => {
         const targetElement = document.querySelector(anchorlink);
         if (targetElement) {
-          const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+          const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
           window.scrollTo({
             top: elementPosition - headerHeight,
             behavior: 'smooth',

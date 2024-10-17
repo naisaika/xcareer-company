@@ -9,6 +9,20 @@ interface onClickProps {
 
 export const InterviewContents = ({onClick, isOpen}: onClickProps) => {
     
+    const handleCloseClick = () => {
+        onClick();
+        setTimeout(() => {
+            const detailElement = document.getElementById('viewDetail');
+            if (detailElement) {
+                const rect = detailElement.getBoundingClientRect();
+                window.scrollTo({
+                    top: rect.top + window.scrollY,
+                    behavior: 'smooth',
+                });
+            }
+        }, 100);
+    }
+
   return (
     <div className={styles.interviewCont}>
         {QUESTION.map((question) => {
@@ -27,7 +41,7 @@ export const InterviewContents = ({onClick, isOpen}: onClickProps) => {
             )
         })}
         <div className={styles.closeBtn}>
-            <DetailViewButton onClick={onClick} isOpen={isOpen}>閉じる</DetailViewButton>
+            <DetailViewButton onClick={handleCloseClick} isOpen={isOpen}>閉じる</DetailViewButton>
         </div>
     </div>
   )

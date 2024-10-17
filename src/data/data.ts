@@ -21,10 +21,10 @@ export interface PointImgType {
 }
 
 export const POINT_IMG: PointImgType[] = [
-    { id: 0, img: "/point/factory.png"},
-    { id: 1, img: "/point/person-care.png"},
-    { id: 2, img: "/point/hearing.png"},
-    { id: 3, img: "/point/matching.png"}
+    { id: 0, img: "https://www-dev.factorx.jp/xcareercompany/point/factory.png"},
+    { id: 1, img: "https://www-dev.factorx.jp/xcareercompany/point/person-care.png"},
+    { id: 2, img: "https://www-dev.factorx.jp/xcareercompany/point/hearing.png"},
+    { id: 3, img: "https://www-dev.factorx.jp/xcareercompany/point/matching.png"}
 ]
 
 // Factor Xの特徴のタイトル
@@ -72,15 +72,15 @@ export interface FlowImgType {
 }
 
 export const FLOW_IMG: FlowImgType[] = [
-    { id: 0, img: "/flow/no1.png"},
-    { id: 1, img: "/flow/no2.png"},
-    { id: 2, img: "/flow/no3.png"},
-    { id: 3, img: "/flow/no4.png"},
-    { id: 4, img: "/flow/no5.png"},
-    { id: 5, img: "/flow/no6.png"},
-    { id: 6, img: "/flow/no7.png"},
-    { id: 7, img: "/flow/no8.png"},
-    { id: 8, img: "/flow/no9.png"},
+    { id: 0, img: "https://www-dev.factorx.jp/xcareercompany/flow/no1.png"},
+    { id: 1, img: "https://www-dev.factorx.jp/xcareercompany/flow/no2.png"},
+    { id: 2, img: "https://www-dev.factorx.jp/xcareercompany/flow/no3.png"},
+    { id: 3, img: "https://www-dev.factorx.jp/xcareercompany/flow/no4.png"},
+    { id: 4, img: "https://www-dev.factorx.jp/xcareercompany/flow/no5.png"},
+    { id: 5, img: "https://www-dev.factorx.jp/xcareercompany/flow/no6.png"},
+    { id: 6, img: "https://www-dev.factorx.jp/xcareercompany/flow/no7.png"},
+    { id: 7, img: "https://www-dev.factorx.jp/xcareercompany/flow/no8.png"},
+    { id: 8, img: "https://www-dev.factorx.jp/xcareercompany/flow/no9.png"},
 ]
 
 // ご利用の流れカードタイトル
@@ -139,8 +139,8 @@ export interface GraphImgType {
 }
 
 export const GRAPH_IMG: GraphImgType[] = [
-    {id: 0, img: "/graph/age-graph.png"},
-    {id: 1, img: "/graph/category-graph.png"},
+    {id: 0, img: "https://www-dev.factorx.jp/xcareercompany/graph/age-graph.png"},
+    {id: 1, img: "https://www-dev.factorx.jp/xcareercompany/graph/category-graph.png"},
 ]
 
 // グラフテキスト
@@ -161,8 +161,8 @@ export interface PersonPictureType {
 }
 
 export const PERSON_PICTURE: PersonPictureType[] = [
-    { id: 0, img: "/voice/person1.png"},
-    { id: 1, img: "/voice/person2.png"},
+    { id: 0, img: "https://www-dev.factorx.jp/xcareercompany/voice/person1.png"},
+    { id: 1, img: "https://www-dev.factorx.jp/xcareercompany/voice/person2.png"},
 ]
 
 // 会社名
@@ -334,6 +334,6 @@ export interface SubmitType {
 }
 
 export const SUBMIT: SubmitType[] = [
-    { id: 0, status: "success", title: "送信完了", img: "/submit/okmark.png", altImg: "送信完了画像", text: "お問い合わせ受付を完了いたしました。", text2: "担当者よりご連絡を差し上げますので、しばらくお待ちくださいますようよろしくお願いいたします。"},
-    { id: 1, status: "failed", title: "送信失敗", img: "/submit/ngmark.png", altImg: "送信失敗画像", text: "メッセージの送信に失敗しました。", text2: "大変お手数ですが、時間をおいてから再度お試しください。"}
+    { id: 0, status: "success", title: "送信完了", img: "https://www-dev.factorx.jp/xcareercompany/submit/okmark.png", altImg: "送信完了画像", text: "お問い合わせ受付を完了いたしました。", text2: "担当者よりご連絡を差し上げますので、しばらくお待ちくださいますようよろしくお願いいたします。"},
+    { id: 1, status: "failed", title: "送信失敗", img: "https://www-dev.factorx.jp/xcareercompany/submit/ngmark.png", altImg: "送信失敗画像", text: "メッセージの送信に失敗しました。", text2: "大変お手数ですが、時間をおいてから再度お試しください。"}
 ]

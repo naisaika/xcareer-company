@@ -51,7 +51,7 @@ export const FormSection = () => {
     setIsLoading(true);
   
     try {
-      const response = await fetch("/api/apiTest", {
+      const response = await fetch("https://www-dev.factorx.jp/test", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

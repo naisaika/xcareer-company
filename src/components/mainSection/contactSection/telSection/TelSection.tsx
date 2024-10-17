@@ -5,7 +5,7 @@ export const TelSection = () => {
   return (
     <div className={styles.telSection}>
         <div className={styles.telCont}>
-            <Image src="/contact/telorange.png" alt="電話画像" width={25} height={28} priority className={styles.telImg}></Image>
+            <Image src="https://www-dev.factorx.jp/xcareercompany/contact/telorange.png" alt="電話画像" width={25} height={28} priority className={styles.telImg}></Image>
             <p className={styles.telText}>0569-21-5539</p>
         </div>
         <p className={styles.telTime}>

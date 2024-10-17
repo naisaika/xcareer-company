@@ -2,16 +2,18 @@
 const nextConfig = {
     reactStrictMode: true,
     trailingSlash: true,
+    output: 'export',
     images: {
+      unoptimized: true,
         remotePatterns: [
-            {
-                protocol: 'https',
-                hostname: 's3.ap-northeast-1.amazonaws.com', // S3のホスト名
-                port: '',
-                pathname: '/xcareercompany/**', // パス
-            },
+          {
+            protocol: 'https',
+            hostname: 's3.ap-northeast-1.amazonaws.com',
+            port: '',
+            pathname: '/xcareercompany/**',
+          },
         ],
-    },
+      },
 };
 
 export default nextConfig;
