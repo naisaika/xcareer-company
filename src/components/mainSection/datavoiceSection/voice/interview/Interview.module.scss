@@ -3,6 +3,7 @@
 .interviewSection {
     background-color: $blue;
     margin-top: 64px;
+    padding-bottom: 56px;
     .isView {
         display: flex;
         padding: 64px 0;
@@ -72,6 +73,8 @@
         background-color: $blue;
         padding-bottom: 64px;
         outline: 2px solid $blue;
+        background-color: $white;
+        border-radius: 5px;
     }
 }
 

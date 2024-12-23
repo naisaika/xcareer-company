@@ -37,7 +37,7 @@ export const Interview = () => {
             <PointTitleParts>
               <InterviewPointParts/>
             </PointTitleParts>
-            <Image src="https://www-dev.factorx.jp/xcareercompany/voice/interview-img.png" alt="インタビュー画像" width={380} height={244} priority className={styles.img}></Image>
+            <Image src="/assets/voice/interview-img.png" alt="インタビュー画像" width={380} height={244} priority className={styles.img}></Image>
           </div>
           <div className={styles.titleCont}>
             <p className={styles.interviewTitle}>インタビューのタイトルをここに表示</p>

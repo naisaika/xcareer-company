@@ -4,9 +4,9 @@
 import styles from "./DetailViewButton.module.scss"
 
 interface childrenProps {
-    children: React.ReactNode;
-    onClick: () => void;
-    isOpen: boolean;
+  children: React.ReactNode;
+  onClick: () => void;
+  isOpen: boolean;
 }
 
 export const DetailViewButton = ({children, onClick, isOpen}: childrenProps) => {

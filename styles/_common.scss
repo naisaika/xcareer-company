@@ -17,7 +17,7 @@ $ornage-shadow: #954801;
 /*section style*/
 .section {
     padding: 80px 0;
-    opacity: 0;
+    // opacity: 0;
     @include mq (400px) {
       padding: 40px 0;
     }

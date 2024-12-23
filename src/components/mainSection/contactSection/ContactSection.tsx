@@ -1,6 +1,3 @@
-"use client";
-
-import { useState, useEffect } from 'react';
 import { TEXT_LIST } from "@/data/data"
 import styles from "./ContactSection.module.scss"
 import { ContactTitleParts } from "./contactTitleParts/ContactTitleParts";
@@ -12,14 +9,8 @@ const titleText = TEXT_LIST.find((textId) => textId.id === sectionId);
 
 export const ContactSection = () => {
 
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
   return (
-    <section className={`${styles.section} ${isVisible ? styles.adjustOpacity : ''}`} id="contactSection">
+    <section className={styles.section} id="contactSection">
         <h2 className={styles.sectionTitle}>{titleText && titleText.title}</h2>
         <div className={styles.wrapper}>
             <p className={styles.sectionText}>Factor Xキャリアへのお問い合わせは以下の入力フォームへ必要事項をご入力の上送信ください。</p>

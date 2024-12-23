@@ -40,11 +40,11 @@ export const TopContents = () => {
             <div className={`${styles.titleCont} ${inView && styles.fadeIn}`}>
                 <p className={styles.subTitle}>工場・製造業のための人材紹介サービス</p>
                 <h1 className={styles.mainTitle}>
-                    <Image src="https://www-dev.factorx.jp/xcareercompany/logo.png" alt={"Factor Xキャリアロゴ"} width={488} height={72} className={styles.titleImg}></Image>
+                    <Image src="assets/logo.png" alt={"Factor Xキャリアロゴ"} width={488} height={72} className={styles.titleImg}></Image>
                 </h1>
             </div>
             <div className={`${styles.topImgCont} ${inView && styles.fadeInOpacity}`}>
-                <Image src="https://www-dev.factorx.jp/xcareercompany/top-img.png" alt={"トップ画像"} width={760} height={480} priority className={styles.topImg}></Image>
+                <Image src="/assets/top-img.png" alt={"トップ画像"} width={760} height={480} priority className={styles.topImg}></Image>
             </div>
         </div>
         <div className={`${styles.descriptionCont} ${inView && styles.fadeIn}`}>

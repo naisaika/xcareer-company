@@ -1,6 +1,3 @@
-"use client";
-
-import { useState, useEffect } from 'react';
 import { TEXT_LIST } from "@/data/data"
 import styles from "./PointSection.module.scss"
 import { PointCard } from "./pointCard/PointCard";
@@ -10,14 +7,8 @@ const titleText = TEXT_LIST.find((textId) => textId.id === sectionId);
 
 export const PointSection = () => {
 
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
   return (
-      <section className={`${styles.section} ${isVisible ? styles.adjustOpacity : ''}`} id="pointSection" >
+      <section className={styles.section} id="pointSection" >
         <h2 className={styles.sectionTitle}>{titleText && titleText.title}</h2>
         <div className={styles.wrapper}>
             <p className={styles.sectionText}>

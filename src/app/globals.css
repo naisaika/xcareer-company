@@ -6,12 +6,8 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	background-color: #fff;
+	/* background-color: #fff; */
 	font-family: 'Noto Sans JP', sans-serif;
-}
-
-html {
-	scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {

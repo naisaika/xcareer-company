@@ -20,7 +20,7 @@ export const HeaderTitle = ({naviClick, isNaviOpen, setIsNaviOpen}: HeaderTitleP
   return (
     <div className={styles.headerTitleSec}>
         <Link href="#" className={styles.headerTitleLink}>
-          <Image src="https://www-dev.factorx.jp/xcareercompany/logo.png" alt={"Factor Xキャリアロゴ"}width={208} height={32} priority className={styles.headerTitle} onClick={handleLogoClick}></Image>
+          <Image src="/assets/logo.png" alt={"Factor Xキャリアロゴ"}width={208} height={32} priority className={styles.headerTitle} onClick={handleLogoClick}></Image>
         </Link>
         <div className={`${styles.naviOpenCont} ${isNaviOpen ? styles.open : ''}`} onClick={naviClick}>
           <span className={`${isNaviOpen? styles.naviCloseLine1: styles.naviOpenLine}`}></span>

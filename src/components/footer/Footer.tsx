@@ -38,32 +38,31 @@ export const Footer = () => {
           }
 
           return (
-      
-              <div className={styles.footerCont} key={title.id}>
-                <div className={styles.footerContents}>
-                  <p className={styles.footerTitle}>{title.title}</p>
-                  <ul className={styles.footerList}>
-                    {linkText && linkText.map((link) => (
-                      <li key={link.id} className={styles.footerListText}>
-                        {link.id === 2 ? (
-                          <p className={styles.footerText2} onClick={() => openModal(link.id)}>
-                            <span className={styles.footerText3}>{link.text}</span>
-                            <span className={styles.footerText4Cont}>
-                              <span className={styles.footerText4}>{link.text2}</span>
-                              <span className={styles.mark}></span>
-                            </span>
-                          </p>
-                        ) : (
-                          <p className={styles.footerText} onClick={() => openModal(link.id)}>{link.text}
+            <div className={styles.footerCont} key={title.id}>
+              <div className={styles.footerContents}>
+                <p className={styles.footerTitle}>{title.title}</p>
+                <ul className={styles.footerList}>
+                  {linkText && linkText.map((link) => (
+                    <li key={link.id} className={styles.footerListText}>
+                      {link.id === 2 ? (
+                        <p className={styles.footerText2} onClick={() => openModal(link.id)}>
+                          <span className={styles.footerText3}>{link.text}</span>
+                          <span className={styles.footerText4Cont}>
+                            <span className={styles.footerText4}>{link.text2}</span>
                             <span className={styles.mark}></span>
-                          </p>
-                        )}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                {title.id === 0 && <div className={styles.line}></div>}
+                          </span>
+                        </p>
+                      ) : (
+                        <p className={styles.footerText} onClick={() => openModal(link.id)}>{link.text}
+                          <span className={styles.mark}></span>
+                        </p>
+                      )}
+                    </li>
+                  ))}
+                </ul>
               </div>
+              {title.id === 0 && <div className={styles.line}></div>}
+            </div>
           );
         })}
     </div>
