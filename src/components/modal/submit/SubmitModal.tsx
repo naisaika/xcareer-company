@@ -17,7 +17,7 @@ export const SubmitModal = ({modalCondition, onClick, success, failed}: modalPro
 
   return (
       <>
-      {modalCondition && <div className={styles.modalBg} onClick={onClick}></div>}
+        {modalCondition && <div className={styles.modalBg} onClick={onClick}></div>}
           {modalStatus && (
             <div className={`${styles.modalSection} ${modalCondition? styles.modalSectionShow: ""}`} key={modalStatus.id}>
               <p className={styles.modalTitle}>{modalStatus.title}</p>

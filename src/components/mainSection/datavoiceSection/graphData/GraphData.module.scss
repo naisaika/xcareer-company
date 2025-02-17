@@ -4,11 +4,6 @@
     display: flex;
     margin: 32px 0;
     padding: 40px 0 24px;
-    background-color: $white;
-    border-radius: 5px;
-    box-shadow: 10px -8px 0 0 rgba(149, 72, 1, 1);
+    background-color: $cream;
     opacity: 0;
-    @include mq (900px) {
-        margin: 32px 40px;
-    }
 }

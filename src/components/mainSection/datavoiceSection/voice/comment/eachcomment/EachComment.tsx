@@ -31,19 +31,18 @@ export const EachComment = ({
     <li className={`${styles.commentList} ${inView && styles.rotateRightIn}`} ref={ref}>
         <PersonPicture pictureImg={img}></PersonPicture>
         <div>
-        <div className={styles.commentListBox}>
-            <PointTitleParts>{companyName && companyText}</PointTitleParts>
-            <div className={styles.personInfo}>
-                <span className={styles.personDepertment}>{depertmentName && depertmentText}</span>
-                <p className={styles.personName}>{personName && personText}
-                    <span className={styles.personName2}>{personName && personText2}</span>
-                </p>
+            <div className={styles.commentListBox}>
+                <PointTitleParts>{companyName && companyText}</PointTitleParts>
+                <div className={styles.personInfo}>
+                    <span className={styles.personDepertment}>{depertmentName && depertmentText}</span>
+                    <p className={styles.personName}>{personName && personText}
+                        <span className={styles.personName2}>{personName && personText2}</span>
+                    </p>
+                </div>
+                <div className={styles.line}></div>
+                <div className={styles.commentText}>{comment && comment}</div>
             </div>
-            <div className={styles.line}></div>
-            <div className={styles.commentText}>{comment && comment}</div>
         </div>
-        </div>
-
     </li>
   )
 }

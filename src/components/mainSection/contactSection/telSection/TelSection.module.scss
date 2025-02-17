@@ -14,26 +14,34 @@
         margin: 24px 16px;
     }
     .telCont {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        text-align: center;
         background-color: $cream;
         color: $orange;
-        font-size: 32px;
+        font-size: 18px;
         font-weight: 600;
-        .telImg {
-            background-color: $cream;
-            margin: 4px 4px 0 0;
+        @include mq (400px) {
+            font-size: 16px;
         }
-        .telText {
-            background-color: $cream;
-            @include mq (400px) {
-                font-size: 28px;
+        .telNumber {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .telImg {
+                margin: 4px 4px 0 0;
             }
-            @include mq (375px) {
-                font-size: 24px;
+            .telText {
+                color: $blue;
+                font-size: 36px;
+                font-weight: 600;
+                @include mq (460px) {
+                    font-size: 32px;
+                }
+                @include mq (375px) {
+                    font-size: 28px;
+                }
             }
         }
+
     }
     .telTime {
         background-color: $cream;

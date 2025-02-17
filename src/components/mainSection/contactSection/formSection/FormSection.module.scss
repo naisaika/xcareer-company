@@ -40,10 +40,10 @@
                     background-color: $cream;
                 }
                 .required {
-                    border: solid 1px $orange;
+                    border: solid 1px $red;
                     border-radius: 3px;
                     padding: 2px 8px;
-                    color: $orange;
+                    color: $red;
                     font-weight: 600;
                     font-size: 12px;
                     margin-left: 8px;
@@ -97,9 +97,8 @@
                 }
             }
             .errorMsg {
-                color: $orange;
+                color: $red;
                 font-size: 14px;
-                background-color: $cream;
                 margin-bottom: 0;
             }
         }
@@ -113,7 +112,7 @@
                 border: none;
                 background-color: transparent;
                 text-decoration: underline;
-                color: $orange;
+                color: $red;
                 font-weight: 600;
                 font-size: 16px;
                 cursor: pointer;
@@ -126,19 +125,19 @@
         .submitBtn {
             margin: 0 auto;
             padding: 16px 32px;
-            background-color: $orange;
+            background-color: $red;
             border-radius: 5px;
             border: none;
             outline: none;
             color: $white;
             font-size: 16px;
             font-weight: 600;
-            box-shadow: 10px -8px 0 0 rgba(149, 72, 1, 1);
+            box-shadow: 10px -8px 0 0 $red-shadow;
             cursor: pointer;
             transition: transform 0.4s ease-in, box-shadow 0.4s ease-in;
             margin-bottom: 24px;
             &:hover {
-                box-shadow: 0 0 0 $ornage-shadow; 
+                box-shadow: 0 0 0 $red-shadow; 
                 transform: translate(4px, -2px);  
             }
             @include mq (550px) {

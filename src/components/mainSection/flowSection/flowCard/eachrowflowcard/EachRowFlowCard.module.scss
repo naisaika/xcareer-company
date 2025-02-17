@@ -6,7 +6,7 @@
     flex-direction: column;
     align-items: center;
     border-radius: 5px;
-    box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, .5);
+    box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, .25);
     opacity: 0;
     padding: 16px 0 0;
     .flowListImg {
@@ -45,6 +45,7 @@
             text-align: justify;
             margin: auto 0;
             background-color: $cream;
+            line-height: 1.6;
         }
     }
 }

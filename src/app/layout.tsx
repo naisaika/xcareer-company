@@ -32,6 +32,7 @@ export default function RootLayout({
         <meta name="twitter:title" content="FactorXキャリア－工場・製造業のための人材紹介サービス－" />
         <meta name="twitter:description" content="Factor Xキャリアは、工場・製造業のための人材紹介サービスです。" />
         <meta name="twitter:image" content="https://www.factorx.jp/xcareercompany/OGP.png" />
+        <meta name="format-detection" content="telephone=no"></meta>
       </head>
       <body className={NotoSansJPFont.className}>
         <Header/>

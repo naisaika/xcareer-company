@@ -19,15 +19,15 @@ export const DataVoiceSection = () => {
           <span>実際にサービスをご利用いただいた企業様の声もご覧いただけます。</span>
           <span>専門のエージェントが貴社の採用課題に寄り添い、採用活動をご支援いたします。</span>
         </p>
-        <div className={styles.dataSection}>
-          <DataTitleParts>Factor Xキャリア登録人材について</DataTitleParts>
-          <GraphData/>
-        </div>
-        <div className={styles.dataSection}>
-          <DataTitleParts>Factor Xキャリア利用企業の声</DataTitleParts>
-        </div>
+      </div>
+      <div className={styles.dataSection}>
+        <DataTitleParts>Factor Xキャリア登録人材について</DataTitleParts>
+      </div>
+      <GraphData/>
+      <div className={styles.dataSection}>
+        <DataTitleParts>Factor Xキャリア利用企業の声</DataTitleParts>
       </div>
       <Voice/>
     </section>
-  )
+  );
 }

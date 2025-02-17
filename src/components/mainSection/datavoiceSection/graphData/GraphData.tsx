@@ -14,7 +14,7 @@ export const GraphData = () => {
 
   return (
     <div className={`${styles.graphSection} ${inView && styles.fadeIn}`} ref={ref}>
-        <GraphCard/>
+      <GraphCard/>
     </div>
   )
 }

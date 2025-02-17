@@ -1,6 +1,6 @@
 "use client";
 
-import { TEXT_LIST } from "@/data/data"
+import { COST_POINTS, TEXT_LIST } from "@/data/data"
 import styles from "./CostSection.module.scss"
 import Image from "next/image";
 import { CostCard } from "./costCard/CostCard";
@@ -25,8 +25,8 @@ export const CostSection = () => {
             <div className={styles.prPointCont}>
                 <p className={styles.prPointNomal}>Factor Xキャリアは</p>
                 <p className={`${styles.prPointStrong} ${inView && styles.scale}`} ref={ref}>
-                    <span className={styles.prPointStrongBlack}>＼業界最安水準／</span>
-                    <span className={styles.prPointStrongOrange}>完全成果報酬型</span>
+                    <span className={styles.prPointStrongOrange}>＼業界最安水準／</span>
+                    <span className={styles.prPointStrongRed}>完全成果報酬型</span>
                 </p>
                 <p className={styles.prPointNomal2}>のサービスです。</p>
             </div>
@@ -35,7 +35,17 @@ export const CostSection = () => {
                 <p className={styles.prSubPointStrong}>料金は一切かかりません！</p>
             </div>
             <div className={styles.cardSection}>
-                <Image src="assets/cost/money.png" alt="無料画像" width={240} height={240} priority className={styles.costImg}></Image>
+                <div className={styles.cardSectionCont}>
+                    <ul className={styles.cardPointList}>
+                        {COST_POINTS.map((point) => 
+                        <li key={point.id} className={styles.cardPointItem}>
+                            <Image src="https://www.factorx.jp/xcareercompany/assets/check-icon.svg" alt="チェックアイコン" width={20} height={16} className={styles.pointIcon}></Image>
+                            {point.text}
+                        </li>
+                        )}
+                    </ul>
+                    <Image src="https://www.factorx.jp/xcareercompany/assets/cost/money.png" alt="無料画像" width={240} height={240} priority className={styles.costImg}></Image>
+                </div>
                 <CostCard/>
             </div>
         </div>

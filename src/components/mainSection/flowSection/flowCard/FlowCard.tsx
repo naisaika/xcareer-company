@@ -11,10 +11,12 @@ export const FlowCard = () => {
             const flowText = FLOW_TEXT.find((text) => text.id === img.id);
 
             return (
-                <EachRowFlowCard key={img.id} id={img.id} img={img.img} 
-                    title={flowTitle?.title} text={flowText?.text} text2={flowText?.text2} 
-                    text3={flowText?.text3}>
-                </EachRowFlowCard>
+              <EachRowFlowCard 
+                key={img.id} id={img.id} img={img.img} 
+                title={flowTitle?.title} text={flowText?.text} text2={flowText?.text2} 
+                text3={flowText?.text3}
+              >
+              </EachRowFlowCard>
             )
         })}
     </ul>

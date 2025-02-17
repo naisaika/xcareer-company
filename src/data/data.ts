@@ -14,6 +14,18 @@ export const TEXT_LIST: TextListType[] = [
     { id: 5, title: "Factor X", anchorlink: "https://www.factorx.jp/"}
 ]
 
+//topアピールポイント
+export interface TopCheckPointType {
+    id: number;
+    text: string;
+}
+
+export const PR_POINTS: TopCheckPointType[] = [
+    { id: 0, text: "求人募集・人材採用・定着までサポート！"},
+    { id: 1, text: "採用工数削減！迅速な人材確保支援"},
+    { id: 2, text: "急な人手不足もお任せ！最適人材をご紹介"},
+]
+
 // Factor Xの特徴の画像
 export interface PointImgType {
     id: number;
@@ -21,10 +33,10 @@ export interface PointImgType {
 }
 
 export const POINT_IMG: PointImgType[] = [
-    { id: 0, img: "/assets/point/factory.jpg"},
-    { id: 1, img: "/assets/point/person-care.jpg"},
-    { id: 2, img: "/assets/point/hearing.jpg"},
-    { id: 3, img: "/assets/point/matching.jpg"}
+    { id: 0, img: "https://www.factorx.jp/xcareercompany/assets/point/factory.jpg"},
+    { id: 1, img: "https://www.factorx.jp/xcareercompany/assets/point/hearing.jpg"},
+    { id: 2, img: "https://www.factorx.jp/xcareercompany/assets/point/matching.jpg"},
+    { id: 3, img: "https://www.factorx.jp/xcareercompany/assets/point/person-care.jpg"}
 ]
 
 // Factor Xの特徴のタイトル
@@ -34,35 +46,93 @@ export interface PointTitleType {
 }
 
 export const POINT_TITLE_TEXT: PointTitleType[] = [
-    { id: 0, title: "工場・製造業特化"},
-    { id: 1, title: "求職者サポートが手厚い"},
-    { id: 2, title: "求人募集・人材採用相談"},
-    { id: 3, title: "紹介可能人材多数"}
+    { id: 0, title: "現場を熟知した人材紹介"},
+    { id: 1, title: "求人募集・採用課題を共に解決"},
+    { id: 2, title: "製造業目線の寄り添い支援"},
+    { id: 3, title: "早期離職防止の人材定着サポート"}
 ]
 
 // Factor Xの特徴のテキスト
 export interface PointTextType {
     id: number;
     text: string;
+    text2: string;
+    text3: string;
+    text4: string;
 }
 
 export const POINT_TEXT: PointTextType[] = [
-    { id: 0, text: "Factor Xキャリアは工場・製造業のための人材紹介サービスです。業界に精通した専門のエージェントが貴社の求人とマッチした適切な人材をご紹介いたします。"},
-    { id: 1, text: "求職者の経験・スキル等の適性をしっかり把握するためにクオリティーの高い面談を実施。貴社の希望にピッタリの人材をご紹介することで採用後のミスマッチを防ぎます。"},
-    { id: 2, text: "求人募集・人材採用に関するお悩みを専属のエージェントへお気軽にご相談いただけます。工場・製造業における採用課題解決の多くの成功事例に基づき、貴社のお悩み解決のご提案をいたします。"},
-    { id: 3, text: "Factor Xキャリアには工場・製造業で働きたい人材、経験・スキルが豊富な人材が多数登録しております。貴社の希望に沿った人材をご紹介可能です。"}
+    { 
+        id: 0, 
+        text: "Factor Xキャリアは、製造業の企業が運営する人材紹介サービスです。",
+        text2: "同じ業界だからこそ、製造業特有の採用課題を深く理解し、求める人材を的確に把握できます。",
+        text3: "「技術スキル」「職場環境への適応力」 など、現場で求められる要素を熟知した専門エージェントが貴社の課題やニーズに合わせ、最適な人材をご紹介します。",
+        text4: "スキルだけでなく、長く活躍できる人材との出会いをサポートいたします。"
+    },
+    { 
+        id: 1, 
+        text: "Factor Xキャリアでは、貴社の採用課題を迅速に把握し、採用成功へと導くサポートを提供しております。",
+        text2: "製造業における採用課題解決の豊富な成功事例に基づき、貴社のお悩みに合わせた最適な対策をご提案。",
+        text3: "「求人票の条件が求職者に伝わりにくい」「採用基準をどう設定すればいいかわからない」 など、企業ごとの課題に寄り添い、採用戦略のアドバイスやプロセスの見直しまで徹底サポート。",
+        text4: "専属エージェントが貴社の採用活動を支え、成功率の高い人材採用を実現します。"
+    },
+    { 
+        id: 2, 
+        text: "Factor Xキャリアは、製造業の企業が運営する人材紹介サービスだからこそ、現場のリアルな課題を素早く把握し、貴社の採用に寄り添います。",
+        text2: "「急な欠員が出た」「専門スキルを持った人材がほしい」「未経験でも長く働ける人材を確保したい」など、製造業特有の採用課題にスピーディーに対応。",
+        text3: "同じ製造業の視点を持つエージェントが貴社の悩みに共感しながら、実情に合った人材採用をしっかりとサポート。",
+        text4: "「どんな人材が合うのか？」を一緒に考え、貴社の事業成長を支える最適な人材をご紹介いたします。"
+    },
+    { 
+        id: 3, 
+        text: "Factor Xキャリアは、単に人材を紹介するだけではなく、入社後の定着までを見据えたトータルサポートを提供しています。",
+        text2: "採用者が「この会社なら安心して働ける！」 と思えるよう、貴社の社風・働き方・現場の雰囲気まで考慮した人材をご紹介。",
+        text3: "入社後のフォローアップも実施し、早期離職を防ぐためのアフターサポートを充実させています。",
+        text4: "定着率の高い人材採用を実現し、貴社の成長を支えます。"
+    },
+]
+
+//コストアピールポイント
+export interface CostCheckPointType {
+    id: number;
+    text: string;
+}
+
+export const COST_POINTS: CostCheckPointType[] = [
+    { id: 0, text: "初期費用0円！"},
+    { id: 1, text: "求人掲載料0円！"},
+    { id: 2, text: "早期退職による返金あり！"},
 ]
 
 // ご利用料金テキスト
 export interface CostTextType {
     id: number;
     text: string;
+    text2: string;
+    text3: string;
+    text4?: string;
 }
 
 export const COST_TEXT: CostTextType[] = [
-    { id: 0, text: "Factor Xキャリアは、完全成果報酬型のサービスです。初期費用は一切不要なのでお気軽にご利用いただけます。"},
-    { id: 1, text: "一般の求人掲載サイトとは異なり、求人掲載料は不要です。採用が決定するまで費用がかからないため、無駄なコストを削減させ効率的な採用活動が可能です。"},
-    { id: 2, text: "採用後、早期退職が発生した場合は入社3か月まで紹介料の一部をご返金させていただきます。"}
+    { 
+        id: 0, 
+        text: "Factor Xキャリアは、完全成果報酬型のサービスです。",
+        text2: "初期費用は一切不要！",
+        text3: "「まずは試してみたい」という場合もお気軽にご利用いただけます。",
+    },
+    { 
+        id: 1, 
+        text: "一般の求人サイトと違い、「求人掲載による費用」は発生しません。",
+        text2: "無駄なコストを削減しながら採用活動可能です。",
+        text3: "「求人を出しても応募が少なく、費用対効果が見えにくい」と感じている企業様も、安心して採用活動をスタートいただけます。",
+    },
+    { 
+        id: 2, 
+        text: "Factor Xキャリアでは、採用後のリスクもサポート。",
+        text2: "万が一、入社3ヶ月以内の早期退職が発生した場合、紹介料の一部をご返金いたします。",
+        text3: "「採用したけど、すぐに辞めてしまうかも」といった不安も軽減。",
+        text4: "「定着する人材」の確保を全力でご支援いたします。"
+    }
 ]
 
 // Factor Xの特徴の画像
@@ -72,15 +142,15 @@ export interface FlowImgType {
 }
 
 export const FLOW_IMG: FlowImgType[] = [
-    { id: 0, img: "assets/flow/no1.png"},
-    { id: 1, img: "assets/flow/no2.jpg"},
-    { id: 2, img: "assets/flow/no3.png"},
-    { id: 3, img: "assets/flow/no4.jpg"},
-    { id: 4, img: "assets/flow/no5.jpg"},
-    { id: 5, img: "assets/flow/no6.png"},
-    { id: 6, img: "assets/flow/no7.jpg"},
-    { id: 7, img: "assets/flow/no8.jpg"},
-    { id: 8, img: "assets/flow/no9.png"},
+    { id: 0, img: "https://www.factorx.jp/xcareercompany/assets/flow/no1.jpg"},
+    { id: 1, img: "https://www.factorx.jp/xcareercompany/assets/flow/no2.jpg"},
+    { id: 2, img: "https://www.factorx.jp/xcareercompany/assets/flow/no3.jpg"},
+    { id: 3, img: "https://www.factorx.jp/xcareercompany/assets/flow/no4.jpg"},
+    { id: 4, img: "https://www.factorx.jp/xcareercompany/assets/flow/no5.jpg"},
+    { id: 5, img: "https://www.factorx.jp/xcareercompany/assets/flow/no6.jpg"},
+    { id: 6, img: "https://www.factorx.jp/xcareercompany/assets/flow/no7.jpg"},
+    { id: 7, img: "https://www.factorx.jp/xcareercompany/assets/flow/no8.jpg"},
+    { id: 8, img: "https://www.factorx.jp/xcareercompany/assets/flow/no9.jpg"},
 ]
 
 // ご利用の流れカードタイトル
@@ -128,8 +198,9 @@ export interface GraphTitleType {
 }
 
 export const GRAPH_TITLE: GraphTitleType[] = [
-    {id: 0, title: "登録者年齢別の割合"},
-    {id: 1, title: "登録者経験職種別の割合"},
+    {id: 0, title: "年齢別の割合"},
+    {id: 1, title: "経験職種別の割合"},
+    {id: 2, title: "年収帯の割合"}
 ]
 
 // グラフ画像
@@ -139,8 +210,9 @@ export interface GraphImgType {
 }
 
 export const GRAPH_IMG: GraphImgType[] = [
-    {id: 0, img: "assets/graph/age-graph.png"},
-    {id: 1, img: "assets/graph/category-graph.png"},
+    {id: 0, img: "https://www.factorx.jp/xcareercompany/assets/graph/age-graph.png"},
+    {id: 1, img: "https://www.factorx.jp/xcareercompany/assets/graph/category-graph.png"},
+    {id: 2, img: "https://www.factorx.jp/xcareercompany/assets/graph/income-graph.png"},
 ]
 
 // グラフテキスト
@@ -161,8 +233,8 @@ export interface PersonPictureType {
 }
 
 export const PERSON_PICTURE: PersonPictureType[] = [
-    { id: 0, img: "assets/voice/person1.png"},
-    { id: 1, img: "assets/voice/person2.png"},
+    { id: 0, img: "https://www.factorx.jp/xcareercompany/assets/voice/person1.png"},
+    { id: 1, img: "https://www.factorx.jp/xcareercompany/assets/voice/person1.png"},
 ]
 
 // 会社名
@@ -172,8 +244,8 @@ export interface CompanyNameType {
 }
 
 export const COMPANY_NAME: CompanyNameType[] = [
-    {id: 0, text: "製造工業株式会社"},
-    {id: 1, text: "株式会社 工場"},
+    {id: 0, text: "株式会社ツクバ"},
+    {id: 1, text: "日鉄精圧品株式会社"},
 ]
 
 // 所属部署
@@ -183,8 +255,8 @@ export interface DapertmentType {
 }
 
 export const DEPERTMENT_NAME: DapertmentType[] = [
-    {id: 0, text: "総務部　人事課"},
-    {id: 1, text: "人事部"},
+    {id: 0, text: "取締役　工場長"},
+    {id: 1, text: "総務部　部長"},
 ]
 
 // 氏名
@@ -195,8 +267,8 @@ export interface PersonNameType {
 }
 
 export const PERSON_NAME: PersonNameType[] = [
-    {id: 0, text: "半田　太郎", text2: "様"},
-    {id: 1, text: "製造　花子", text2: "様"},
+    {id: 0, text: "後藤　成幸", text2: "様"},
+    {id: 1, text: "小幡　康隆", text2: "様"},
 ]
 
 // コメント内容
@@ -206,8 +278,8 @@ export interface CommentType {
 }
 
 export const COMMENT: CommentType[] = [
-    {id: 0, text: "利用した企業のコメントがここには入ります。利用した企業のコメントがここには入ります。利用した企業のコメントがここには入ります。利用した企業のコメントがここには入ります。利用した企業のコメントがここには入ります。利用した企業のコメントがここには入ります。利用した企業のコメントがここには入ります。利用した企業のコメントがここには入ります。利用した企業のコメントがここには入ります。"},
-    {id: 1, text: "利用した企業のコメントがここには入ります。利用した企業のコメントがここには入ります。利用した企業のコメントがここには入ります。利用した企業のコメントがここには入ります。利用した企業のコメントがここには入ります。利用した企業のコメントがここには入ります。利用した企業のコメントがここには入ります。"},
+    {id: 0, text: "FactorXキャリアのエージェントは製造業の様々な業種に詳しいこともあり、必要なスキルを簡単に伝えるだけで、適材な人材がすぐ見つかることで助かっています。また紹介料が他社比較して、安価のため、安心して利用することができます。"},
+    {id: 1, text: "FactorXキャリアは専門性の高い要件に対し、マッチ率が高い人材を紹介して頂けます。特に定量的に表現できない要件に対し、言語化してもらえる点や製造業の人材の実態等の情報提供や入社後のフォロー等、付加価値の高い人材紹介サービスです。今後も引き続き、よろしくお願いいたします。"}
 ]
 
 //インタビュー質問
@@ -334,6 +406,6 @@ export interface SubmitType {
 }
 
 export const SUBMIT: SubmitType[] = [
-    { id: 0, status: "success", title: "送信完了", img: "assets/submit/okmark.png", altImg: "送信完了画像", text: "お問い合わせ受付を完了いたしました。", text2: "担当者よりご連絡を差し上げますので、しばらくお待ちくださいますようよろしくお願いいたします。"},
-    { id: 1, status: "failed", title: "送信失敗", img: "assets/submit/ngmark.png", altImg: "送信失敗画像", text: "メッセージの送信に失敗しました。", text2: "大変お手数ですが、時間をおいてから再度お試しください。"}
+    { id: 0, status: "success", title: "送信完了", img: "https://www.factorx.jp/xcareercompany/assets/submit/okmark.png", altImg: "送信完了画像", text: "お問い合わせ受付を完了いたしました。", text2: "担当者よりご連絡を差し上げますので、しばらくお待ちくださいますようよろしくお願いいたします。"},
+    { id: 1, status: "failed", title: "送信失敗", img: "https://www.factorx.jp/xcareercompany/assets/submit/ngmark.png", altImg: "送信失敗画像", text: "メッセージの送信に失敗しました。", text2: "大変お手数ですが、時間をおいてから再度お試しください。"}
 ]

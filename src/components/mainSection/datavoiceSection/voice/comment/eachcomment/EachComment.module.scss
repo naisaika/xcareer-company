@@ -5,9 +5,7 @@
     flex-direction: column;
     justify-content: center;
     gap: 24px;
-    background-color: $cream;
     opacity: 0;
-    outline: solid 2px $cream;
     .commentListBox {
         background-color: $blue;
         border-radius: 5px;
@@ -16,7 +14,8 @@
         flex-direction: column;
         align-items: center;
         color: $white;
-        min-height: 430px;
+        min-height: 400px;
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, .25);
     }
     .personInfo {
         background-color: $blue;
@@ -50,6 +49,8 @@
         font-size: 14px;
         font-weight: 300;
         padding: 0 16px;
+        text-align: justify;
+        line-height: 1.6;
         @include mq (760px) {
             padding: 0;
         }

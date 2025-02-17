@@ -5,8 +5,11 @@ export const TelSection = () => {
   return (
     <div className={styles.telSection}>
         <div className={styles.telCont}>
-            <Image src="/assets/contact/telorange.png" alt="電話画像" width={25} height={28} priority className={styles.telImg}></Image>
-            <p className={styles.telText}>0569-21-5539</p>
+            <p>＼今すぐのご相談はこちら／</p>
+            <div className={styles.telNumber}>
+              <Image src="https://www.factorx.jp/xcareercompany/assets/contact/tel-icon.svg" alt="電話画像" width={25} height={28} priority className={styles.telImg}></Image>
+              <p className={styles.telText}>0569-21-5539</p>
+            </div>
         </div>
         <p className={styles.telTime}>
           <span className={styles.acceptTimetitle}>受付時間：</span>

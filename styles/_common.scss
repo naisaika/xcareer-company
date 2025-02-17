@@ -2,10 +2,13 @@
 $black: #333;
 $white: #fff;
 $blue: #102047;
-$orange: #CA6A19;
+$orange: #C35900;
 $yellow: #E0A009;
 $cream: #FDFAEA;
+$red: #8F0F24;
 $ornage-shadow: #954801;
+$red-shadow: #D7687A;
+$white-80: rgba(255, 255, 255, .8);
 
 /*responsive template*/
 @mixin mq ($width) {
@@ -99,7 +102,7 @@ $ornage-shadow: #954801;
 
 /*inview fadein*/
 .fadeIn {
-    animation: fadeIn 1.5s ease-in forwards;
+    animation: fadeIn 1s ease-in forwards;
   }
   
   @keyframes fadeIn {
@@ -115,7 +118,7 @@ $ornage-shadow: #954801;
 
 /*inview opacity*/
 .fadeInOpacity {
-    animation: fadeInOpacity 2s ease-in forwards;
+    animation: fadeInOpacity 1.5s ease-in forwards;
   }
   
   @keyframes fadeInOpacity {
@@ -129,7 +132,7 @@ $ornage-shadow: #954801;
 
 /*inview delayFadein*/
 .delayFadeIn {
-  animation: fadeIn 1.5s ease-in forwards;
+  animation: fadeIn 1s ease-in forwards;
   animation-delay: .2s;
 }
 

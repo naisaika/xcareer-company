@@ -142,6 +142,5 @@ export const PrivacyPolicyText = () => {
           <p>個人情報管理に関するお問い合わせや、利用目的の通知、開示、訂正、追加または削除、利用の停止、消去または第三者への提供の停止の依頼は、「x-career@hanju.co.jp」宛にご連絡ください。</p>
       </div>
     </div>
-    
   )
 }

@@ -73,7 +73,7 @@ export const Footer = () => {
       <PrivacyPolicyModal onClick={closeModal} modalCondition={true} />
     )}
     <div className={styles.copyrightCont}>
-      <small className={styles.copyright}>&copy; 2024 Factor X career</small>
+      <small className={styles.copyright}>&copy; 2025 Factor X career</small>
     </div>
     </>
   );

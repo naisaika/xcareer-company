@@ -30,7 +30,10 @@ export const CostCard = () => {
         {POINT_ID.map((point) => {
 
             const pointDetail = POINT_DETAIL[point.id]; 
-            const matchedText = COST_TEXT.find((text) => text.id === point.id);
+            const matchedText = COST_TEXT.find((text) => text.id === point.id)?.text;
+            const matchedText2 = COST_TEXT.find((text2) => text2.id === point.id)?.text2;
+            const matchedText3 = COST_TEXT.find((text3) => text3.id === point.id)?.text3;
+            const matchedText4 = COST_TEXT.find((text4) => text4.id === point.id)?.text4;
 
             return (
                 <li className={`${styles.cardList} ${inView && styles.rotateIn}`} key={point.id}>
@@ -46,9 +49,17 @@ export const CostCard = () => {
                     <div className={styles.cardLine}></div>
                     <div className={styles.cardRightCont}>
                         {matchedText && 
-                        <p className={styles.cardText}>
-                            {matchedText.text}
-                        </p>}
+                            <p className={styles.cardText}>{matchedText}</p>
+                        }
+                        {matchedText2 && 
+                            <p className={styles.cardText}>{matchedText2}</p>
+                        }
+                        {matchedText3 && 
+                            <p className={styles.cardText}>{matchedText3}</p>
+                        }
+                        {matchedText4 && 
+                            <p className={styles.cardText}>{matchedText4}</p>
+                        }
                     </div>
                 </li>
             )

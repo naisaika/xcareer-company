@@ -11,13 +11,13 @@ import { TopSection } from "./topSection/TopSection"
 export const MainSection = () => {
   return (
     <main className={styles.mainSection}>
-        <TopSection/>
-        <PointSection/>
-        <CostSection/>
-        <FlowSection/>
-        <DataVoiceSection/>
-        <ContactSection/>
-        <Footer/>
+      <TopSection/>
+      <PointSection/>
+      <CostSection/>
+      <FlowSection/>
+      <DataVoiceSection/>
+      <ContactSection/>
+      <Footer/>
     </main>
   )
 }
